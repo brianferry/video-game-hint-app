@@ -1,0 +1,34 @@
+{
+  "name": "retro-game-hints",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A DIY progressive hint system for classic video games",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run && playwright test",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "mcp": "node tools/mcp-server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "fuse.js": "^7.0.0",
+    "marked": "^15.0.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.11.1",
+    "@playwright/test": "^1.59.1",
+    "@sveltejs/vite-plugin-svelte": "^7.0.0",
+    "@testing-library/svelte": "^5.0.0",
+    "jsdom": "^26.0.0",
+    "svelte": "^5.53.12",
+    "vite": "^8.0.1",
+    "vite-plugin-singlefile": "^2.0.0",
+    "vitest": "^3.0.0"
+  }
+}

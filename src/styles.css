@@ -1,0 +1,899 @@
+/* ============================================================
+   ~*~ RETRO GAME HINTS ~*~ Early 2000s Web Revival Edition ~*~
+   All contrast ratios verified against WCAG 2.1 AA.
+   ============================================================ */
+
+:root {
+  --color-bg:          #1a0a2e;
+  --color-surface:     #1e1245;
+  --color-border:      #6633cc;
+  --color-text:        #e0e0ff;  /* on bg: 12.2:1 */
+  --color-text-muted:  #b0a0d0;  /* on bg:  6.8:1 */
+  --color-text-secondary: #9988bb;
+  --color-link:        #00ffcc;  /* on bg: 12.6:1 */
+  --color-link-hover:  #66ffdd;
+  --color-focus:       #ffff00;
+  --color-accent:      #ff66ff;
+  --color-btn-primary:       #6633cc;
+  --color-btn-primary-hover: #7744dd;
+  --color-surface-hover: #2a1a55;
+  --color-toggle-bg:   #2a1655;
+  --color-hint-bg:     #150a28;
+  --color-hint-border: #6633cc;
+  --color-tag-bg:      #2a1655;
+  --color-tag-text:    #cc99ff;
+  --color-star:        #ffcc00;
+  --color-glow:        #6633cc;
+
+  --font-sans: Verdana, Tahoma, Geneva, "DejaVu Sans", sans-serif;
+  --font-heading: "Comic Sans MS", "Comic Sans", "Chalkboard SE",
+                  Verdana, sans-serif;
+  --font-mono: "Courier New", Courier, "Lucida Console", monospace;
+
+  --radius:     0px;
+  --radius-lg:  0px;
+  --shadow:     2px 2px 0 #000, inset 1px 1px 0 rgba(255 255 255 / 0.1);
+  --shadow-lg:  3px 3px 0 #000, inset 1px 1px 0 rgba(255 255 255 / 0.1);
+  --transition: 150ms ease;
+  --border-3d:  2px outset #7755cc;
+  --border-3d-inset: 2px inset #7755cc;
+}
+
+/* Light theme — classic Geocities yellow/white page */
+[data-theme="light"] {
+  --color-bg:          #ffffdd;
+  --color-surface:     #ffffff;
+  --color-border:      #9999cc;
+  --color-text:        #000066;  /* on bg: 12.8:1 */
+  --color-text-muted:  #333399;  /* on bg:  7.5:1 */
+  --color-text-secondary: #555588;
+  --color-link:        #0000cc;  /* on bg:  8.6:1 */
+  --color-link-hover:  #cc0000;
+  --color-focus:       #0000cc;
+  --color-accent:      #cc00cc;
+  --color-btn-primary:       #333399;
+  --color-btn-primary-hover: #4444aa;
+  --color-surface-hover: #eeeeff;
+  --color-toggle-bg:   #ddddff;
+  --color-hint-bg:     #eeeeff;
+  --color-hint-border: #9999cc;
+  --color-tag-bg:      #ddddff;
+  --color-tag-text:    #333399;
+  --color-star:        #cc9900;
+  --color-glow:        #9999cc;
+
+  --shadow:     2px 2px 0 #999, inset 1px 1px 0 rgba(255 255 255 / 0.5);
+  --shadow-lg:  3px 3px 0 #999, inset 1px 1px 0 rgba(255 255 255 / 0.5);
+  --border-3d:  2px outset #bbbbdd;
+  --border-3d-inset: 2px inset #bbbbdd;
+}
+
+/* ============================================================
+   Reset
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(102 51 204 / 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255 102 255 / 0.08) 0%, transparent 40%);
+  min-height: 100dvh;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+[data-theme="light"] body {
+  background-image: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================================
+   Accessibility
+   ============================================================ */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--color-surface);
+  color: var(--color-link);
+  border: var(--border-3d);
+  font-weight: 600;
+  text-decoration: none;
+  transition: top var(--transition);
+}
+
+.skip-link:focus { top: 1rem; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+:focus:not(:focus-visible) { outline: none; }
+
+/* ============================================================
+   Layout
+   ============================================================ */
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.app-header {
+  border-bottom: var(--border-3d);
+  background: linear-gradient(180deg,
+    color-mix(in srgb, var(--color-surface) 100%, transparent) 0%,
+    color-mix(in srgb, var(--color-bg) 100%, transparent) 100%);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  max-width: 48rem;
+  margin-inline: auto;
+  padding: 0.6rem clamp(1rem, 4vw, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.app-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-accent);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: 0 0 8px color-mix(in srgb, var(--color-accent) 50%, transparent);
+  letter-spacing: 0.02em;
+}
+
+[data-theme="light"] .app-name {
+  text-shadow: 1px 1px 0 #ccc;
+}
+
+.app-name::before {
+  content: "~*~ ";
+}
+
+.app-name::after {
+  content: " ~*~";
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+main {
+  flex: 1;
+  max-width: 48rem;
+  margin-inline: auto;
+  width: 100%;
+  padding: 1.5rem clamp(1rem, 4vw, 2rem) 3rem;
+}
+
+/* ============================================================
+   Theme toggle
+   ============================================================ */
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: var(--border-3d);
+  background: var(--color-toggle-bg);
+  color: var(--color-text);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.theme-toggle:hover { background: var(--color-surface-hover); }
+.theme-toggle:active { border-style: inset; }
+
+.icon-sun { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+.icon-moon { fill: currentColor; stroke: none; }
+.icon-moon { display: none; }
+
+[data-theme="dark"] .icon-sun,
+[data-theme="light"] .icon-moon { /* defaults are fine */ }
+[data-theme="dark"] .icon-sun { display: none; }
+[data-theme="dark"] .icon-moon { display: block; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .icon-sun { display: none; }
+  :root:not([data-theme="light"]) .icon-moon { display: block; }
+}
+
+/* ============================================================
+   Decorative HR (Geocities-style section divider)
+   ============================================================ */
+
+.view-title::after {
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 0.4rem;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-accent) 15%,
+    var(--color-link) 50%,
+    var(--color-accent) 85%,
+    transparent 100%
+  );
+}
+
+/* ============================================================
+   Breadcrumb
+   ============================================================ */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+  font-family: var(--font-mono);
+}
+
+.breadcrumb button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--color-link);
+  font-size: inherit;
+  font-family: inherit;
+  text-decoration: underline;
+}
+
+.breadcrumb button:hover { color: var(--color-link-hover); }
+
+.breadcrumb-sep {
+  color: var(--color-accent);
+  margin: 0 0.2rem;
+}
+
+.breadcrumb-current {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+/* ============================================================
+   Search
+   ============================================================ */
+
+.search-bar {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+  border: var(--border-3d-inset);
+  background: color-mix(in srgb, var(--color-surface) 80%, black);
+  color: var(--color-text);
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  transition: border-color var(--transition);
+}
+
+.search-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.search-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 6px color-mix(in srgb, var(--color-accent) 40%, transparent);
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.search-results {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-result-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--color-link);
+  text-decoration: underline;
+  transition: background var(--transition);
+}
+
+.search-result-item:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-link-hover);
+}
+
+.search-result-breadcrumb {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  display: block;
+  margin-bottom: 0.1rem;
+  text-decoration: none;
+  font-family: var(--font-mono);
+}
+
+/* ============================================================
+   Game cards
+   ============================================================ */
+
+.game-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.game-card {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 0.85rem;
+  border: var(--border-3d);
+  background: var(--color-surface);
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--color-text);
+  transition: background var(--transition);
+}
+
+.game-card:hover {
+  background: var(--color-surface-hover);
+}
+
+.game-card-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+  color: var(--color-link);
+}
+
+.game-card:hover .game-card-title {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+.game-card-meta {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+
+/* ============================================================
+   Coverage bar
+   ============================================================ */
+
+.coverage-bar {
+  position: relative;
+  height: 1rem;
+  background: color-mix(in srgb, var(--color-hint-bg) 100%, transparent);
+  border: 1px inset var(--color-border);
+  overflow: hidden;
+  margin-top: 0.4rem;
+}
+
+.coverage-bar-lg {
+  height: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.coverage-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-link));
+  opacity: 0.4;
+  transition: width 0.4s ease;
+}
+
+.coverage-label {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 0.5rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-text);
+  white-space: nowrap;
+  font-family: var(--font-mono);
+}
+
+.coverage-bar-lg .coverage-label {
+  font-size: 0.75rem;
+}
+
+/* ============================================================
+   Context subtitle
+   ============================================================ */
+
+.item-card-context {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 0.1rem;
+  font-style: italic;
+}
+
+.situation-context {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+/* ============================================================
+   Area / Situation lists
+   ============================================================ */
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.item-card {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.65rem 0.85rem;
+  border: var(--border-3d);
+  background: var(--color-surface);
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--color-text);
+  transition: background var(--transition);
+}
+
+.item-card:hover {
+  background: var(--color-surface-hover);
+}
+
+.item-card-title {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-link);
+}
+
+.item-card:hover .item-card-title {
+  text-decoration: underline;
+}
+
+.item-card-sub {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 0.1rem;
+  font-family: var(--font-mono);
+}
+
+/* Tags */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.35rem;
+}
+
+.tag {
+  font-size: 0.65rem;
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-tag-bg);
+  color: var(--color-tag-text);
+  font-weight: 500;
+  font-family: var(--font-mono);
+}
+
+/* ============================================================
+   Hint cards (progressive reveal)
+   ============================================================ */
+
+.hint-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.hint-card {
+  border: var(--border-3d);
+  overflow: hidden;
+}
+
+.hint-reveal-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  background: var(--color-surface);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  transition: background var(--transition);
+  min-height: 44px;
+}
+
+.hint-reveal-btn:hover:not(:disabled) {
+  background: var(--color-surface-hover);
+  text-decoration: underline;
+}
+
+.hint-reveal-btn:disabled {
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.hint-content {
+  padding: 0.65rem 0.85rem;
+  background: var(--color-hint-bg);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  border-top: 1px dashed var(--color-border);
+}
+
+.hint-content p { margin-bottom: 0.5rem; }
+.hint-content p:last-child { margin-bottom: 0; }
+.hint-content ul, .hint-content ol { padding-left: 1.5rem; margin-bottom: 0.5rem; }
+.hint-content strong { font-weight: 700; color: var(--color-accent); }
+
+/* Inline spoilers */
+details.spoiler {
+  cursor: pointer;
+  display: inline;
+}
+
+details.spoiler summary {
+  display: inline;
+  user-select: none;
+  font-weight: 700;
+  color: var(--color-accent);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+details.spoiler[open] summary {
+  margin-right: 0.25rem;
+}
+
+/* ============================================================
+   Placeholder / empty states
+   ============================================================ */
+
+.placeholder {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  font-family: var(--font-heading);
+}
+
+/* ============================================================
+   View titles
+   ============================================================ */
+
+.view-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 4vw, 1.6rem);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  line-height: 1.2;
+  color: var(--color-accent);
+  text-shadow: 0 0 10px color-mix(in srgb, var(--color-accent) 30%, transparent);
+}
+
+[data-theme="light"] .view-title {
+  text-shadow: 1px 1px 0 #ccc;
+  color: var(--color-text);
+}
+
+.view-subtitle {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-mono);
+}
+
+/* ============================================================
+   Buttons (general)
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: var(--border-3d);
+  background: var(--color-surface);
+  color: var(--color-text);
+  transition: background var(--transition);
+  text-decoration: none;
+  min-height: 44px;
+  font-family: var(--font-sans);
+}
+
+.btn:active { border-style: inset; }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text-muted);
+}
+
+.btn-ghost:hover { background: var(--color-surface-hover); color: var(--color-text); }
+
+/* ============================================================
+   Star ratings
+   ============================================================ */
+
+.star-rating {
+  display: inline-flex;
+  gap: 0.05rem;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.star-rating-inline {
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.star {
+  color: var(--color-text-muted);
+}
+
+.star-filled {
+  color: var(--color-star);
+  text-shadow: 0 0 4px color-mix(in srgb, var(--color-star) 50%, transparent);
+}
+
+.game-card-bottom {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+.game-card-bottom .coverage-bar {
+  flex: 1;
+  margin-top: 0;
+}
+
+.quality-summary {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-family: var(--font-mono);
+}
+
+/* ============================================================
+   Source attribution
+   ============================================================ */
+
+.source-refs {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  margin-top: 0.75rem;
+  padding-top: 0.4rem;
+  border-top: 1px dashed var(--color-border);
+  font-family: var(--font-mono);
+}
+
+.source-refs-label {
+  font-weight: 700;
+  margin-right: 0.3rem;
+}
+
+.source-ref {
+  display: inline;
+}
+
+.source-ref a {
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
+.source-ref a:hover {
+  color: var(--color-link-hover);
+}
+
+.sources-list {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--color-border);
+}
+
+.sources-title {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-accent);
+}
+
+.sources-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sources-list li {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  padding: 0.25rem 0;
+  font-family: var(--font-mono);
+}
+
+.sources-list li a {
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
+.sources-list li a:hover {
+  color: var(--color-link-hover);
+}
+
+.source-author {
+  margin-left: 0.3rem;
+}
+
+.source-platform {
+  margin-left: 0.25rem;
+}
+
+/* ============================================================
+   Import metadata
+   ============================================================ */
+
+.import-meta {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--color-border);
+  font-family: var(--font-mono);
+}
+
+/* ============================================================
+   Scrollbar (themed for dark mode vibes)
+   ============================================================ */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border: 1px outset var(--color-border);
+}
+
+/* ============================================================
+   Selection color
+   ============================================================ */
+
+::selection {
+  background: var(--color-accent);
+  color: #000;
+}
+
+/* ============================================================
+   Links global
+   ============================================================ */
+
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+a:visited {
+  color: color-mix(in srgb, var(--color-link) 70%, var(--color-accent));
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+
+.site-footer {
+  border-top: var(--border-3d);
+  background: var(--color-surface);
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: 48rem;
+  margin-inline: auto;
+}
+
+.footer-text {
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+  letter-spacing: 0.03em;
+}

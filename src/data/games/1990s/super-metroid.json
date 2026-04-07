@@ -1,0 +1,1567 @@
+{
+  "slug": "super-metroid",
+  "title": "Super Metroid",
+  "year": 1994,
+  "era": "1990s",
+  "totalEstimatedSituations": 55,
+  "quality": null,
+  "importedAt": "2026-04-06T00:00:00Z",
+  "importSource": {
+    "file": "39375.txt",
+    "url": "https://gamefaqs.gamespot.com/snes/588741-super-metroid/faqs/39375"
+  },
+  "sources": [
+    {
+      "id": "src-1",
+      "name": "Foxhound3857's Strategy Guide/FAQ v1.3",
+      "url": "https://gamefaqs.gamespot.com/snes/588741-super-metroid/faqs/39375",
+      "author": "Foxhound3857",
+      "platform": "GameFAQs"
+    }
+  ],
+  "areas": [
+    {
+      "id": "ceres-station",
+      "name": "Ceres Station",
+      "order": 1,
+      "situations": [
+        {
+          "id": "ceres-ridley",
+          "title": "Fighting Ridley at Ceres Station",
+          "order": 1,
+          "context": "Samus, Ceres research lab, Ridley appeared and grabbed the Metroid",
+          "tags": [
+            "early-game",
+            "ceres-station",
+            "boss",
+            "ridley",
+            "tutorial-area",
+            "power-beam-only"
+          ],
+          "hints": [
+            "You don't actually have to win this fight — there are two ways to handle it.",
+            "You can either shoot **Ridley** 100 times with your power beam until he drops the Metroid, or you can let him damage you down to 29 energy and he'll leave on his own.",
+            "If fighting: stay on the left side, wall jump to avoid his ram attacks. [SPOILER: At 1HP remaining, Ridley drops the Metroid then takes it and flies away regardless — the outcome is the same either way.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.1: Space colony: Ceres station — Ridley Boss",
+              "lines": "957-996",
+              "textFragment": "Boss battle: Ridley.    Power beam: 20."
+            }
+          ]
+        },
+        {
+          "id": "ceres-escape",
+          "title": "Escaping Ceres Before It Explodes",
+          "order": 2,
+          "context": "Samus, Ceres Station, self-destruct activated and need to reach the elevator",
+          "tags": [
+            "early-game",
+            "ceres-station",
+            "navigation",
+            "timed-sequence",
+            "escape",
+            "steam-hazards"
+          ],
+          "hints": [
+            "You have one minute — just retrace your steps back to the elevator at the top.",
+            "Watch out for **steam bursts** on the stairway — they stun you. Time each burst and jump past.",
+            "Run through the hallway, time the steam in the stairway, then [SPOILER: jump up the left platforms in the elevator shaft to reach the top. Wall jumping off the right wall is faster but riskier.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.1: Space colony: Ceres station — Escape",
+              "lines": "998-1023",
+              "textFragment": "Whatever way you choose to fight this battle,"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crateria",
+      "name": "Crateria",
+      "order": 2,
+      "situations": [
+        {
+          "id": "crateria-where-to-go",
+          "title": "Where to Go After Landing",
+          "order": 3,
+          "context": "Samus, Crateria landing site, just arrived on Zebes and don't know where to go",
+          "tags": [
+            "early-game",
+            "crateria-surface",
+            "navigation",
+            "pre-morph-ball",
+            "first-visit",
+            "exploration"
+          ],
+          "hints": [
+            "You can't go right yet — those blocks need an ability you don't have. Head left instead.",
+            "Go through the blue door on the left, then keep heading left and drop down through the gap. Look for a door on the floor.",
+            "Head left, drop down through the rooms into the [SPOILER: old Tourian escape shaft from Metroid 1. Go through the blue door at the bottom right, past the old Mother Brain room, and take the elevator down to Brinstar.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.2: Crateria and bombs — Landing",
+              "lines": "1025-1062",
+              "textFragment": "4.2: Crateria and bombs."
+            }
+          ]
+        },
+        {
+          "id": "getting-morph-ball",
+          "title": "Finding the Morph Ball",
+          "order": 4,
+          "context": "Samus, old Brinstar area, exploring after taking elevator down from Crateria",
+          "tags": [
+            "early-game",
+            "brinstar-old",
+            "item-hunt",
+            "morph-ball",
+            "pre-morph-ball",
+            "chozo-statue"
+          ],
+          "hints": [
+            "The item you need is very close — it's in the same room you entered from the elevator.",
+            "Look to the **left** of the room. Jump over the obstruction.",
+            "The **Morph Ball** is sitting in a [SPOILER: Chozo statue to the left of the room entrance. Jump over the rock formation to reach it. Press down twice to morph.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.2: Crateria and bombs — Morph Ball",
+              "lines": "1064-1076",
+              "textFragment": "We won't be here very long, but do you recognize this"
+            }
+          ]
+        },
+        {
+          "id": "getting-missiles",
+          "title": "Finding Your First Missiles",
+          "order": 5,
+          "context": "Samus, old Brinstar, have Morph Ball but no weapons besides power beam",
+          "tags": [
+            "early-game",
+            "brinstar-old",
+            "item-hunt",
+            "missiles",
+            "post-morph-ball",
+            "chozo-statue"
+          ],
+          "hints": [
+            "After getting the Morph Ball, there's more to find in this area before heading back up.",
+            "Shoot the sandstone floor platforms to drop down, then look for a narrow passage on the left that you can now roll through.",
+            "Drop through the floor, [SPOILER: morph and roll through the left passage to find a Chozo statue holding your first **Missiles** (5). Shoot the sphere in its hand to collect them.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.2: Crateria and bombs — Missiles",
+              "lines": "1078-1089",
+              "textFragment": "The floor platforms are made of sandstone. Shoot them"
+            }
+          ]
+        },
+        {
+          "id": "getting-bombs",
+          "title": "Finding the Bombs",
+          "order": 6,
+          "context": "Samus, Crateria, have Morph Ball and Missiles but can't break certain blocks",
+          "tags": [
+            "early-game",
+            "crateria-surface",
+            "item-hunt",
+            "bombs",
+            "post-missiles",
+            "chozo-statue",
+            "boss-follows"
+          ],
+          "hints": [
+            "Head back up to Crateria from old Brinstar. There are narrow tunnels in the main room you can now use with the Morph Ball.",
+            "Take the **left tunnel** to drop down, then head right through a blue door. Open the **red door** at the end with 5 missiles.",
+            "Behind the red door is a [SPOILER: Chozo statue holding the **Bombs**. After collecting them, the statue comes to life — fight **Torizo** by shooting missiles at its chest plate (8 missiles to kill).]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.2: Crateria and bombs — Bombs & Torizo",
+              "lines": "1108-1163",
+              "textFragment": "through the blue door that can only be reached with"
+            }
+          ]
+        },
+        {
+          "id": "first-energy-tank",
+          "title": "Finding the First Energy Tank",
+          "order": 7,
+          "context": "Samus, Crateria, have bombs and need more energy before going deeper",
+          "tags": [
+            "early-game",
+            "crateria",
+            "energy-tank",
+            "exploration",
+            "bendezium"
+          ],
+          "hints": [
+            "The first Energy Tank is in Crateria, accessible after you get the bombs. You need to go further left from the old Mother Brain room.",
+            "After bombing the bendezium wall left of the main shaft gap, go through the blue door. Run down the sloping corridor to find the Energy Tank at the end.",
+            "From the main Crateria shaft, bomb the bendezium blocks on the left side of the gap. Go through the blue door behind them and [SPOILER: run all the way down the slope — the Energy Tank is sitting right at the end of the corridor, giving you 199 total energy.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.2: Crateria and bombs — First Energy Tank",
+              "lines": "1186-1206",
+              "textFragment": "your first \"ENERGY TANK\" (1.)!"
+            }
+          ]
+        },
+        {
+          "id": "torizo-boss",
+          "title": "Defeating the Torizo (Bomb Guardian)",
+          "order": 8,
+          "context": "Samus, Crateria, the Chozo statue came alive after picking up the bombs",
+          "tags": [
+            "early-game",
+            "crateria",
+            "boss",
+            "torizo",
+            "chozo-statue",
+            "bombs"
+          ],
+          "hints": [
+            "After grabbing the Bombs, the door seals and the Chozo statue comes to life. Don't panic — this boss is manageable with just your Power Beam and Missiles.",
+            "Torizo has 800 HP. Missiles deal 100 damage each (8 kills it). Aim for the **chest plate** — it breaks after 5 missiles, then the face after a few more. Shoot his thrown bombs for energy/missile pickups.",
+            "If using missiles: fire at his chest when he opens up — 8 missiles total kills him. [SPOILER: Dodge energy waves by crouching (if aimed high) or jumping (if aimed low). At 720 damage his face blows off and he speeds up — finish him quickly with your remaining missiles.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.2: Crateria and bombs — Torizo Boss",
+              "lines": "1130-1175",
+              "textFragment": "Boss battle: Torizo.          Power beam: 20."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "brinstar-green",
+      "name": "Brinstar (Green/Pink)",
+      "order": 3,
+      "situations": [
+        {
+          "id": "brinstar-hub-navigation",
+          "title": "Navigating the Brinstar Hub Room",
+          "order": 7,
+          "context": "Samus, green Brinstar main shaft, lots of red doors and don't know which way to go",
+          "tags": [
+            "early-game",
+            "green-brinstar-main-shaft",
+            "navigation",
+            "post-bombs",
+            "multiple-paths",
+            "red-doors"
+          ],
+          "hints": [
+            "This room is a hub with many paths. You need missiles to open the red doors. Start with the ones you can reach.",
+            "Go through the **bottom right** door first — that's the main progression path through pink Brinstar.",
+            "Top right has missiles, middle left is a save station, bottom left is a missile recharge. [SPOILER: Bottom right leads to the Charge Beam and eventually Spore Spawn and the Super Missiles path.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.3: To the Varia suit — Brinstar hub",
+              "lines": "1227-1243",
+              "textFragment": "Dig that cool music. Anyway, this room has 5 different"
+            }
+          ]
+        },
+        {
+          "id": "getting-charge-beam",
+          "title": "Finding the Charge Beam",
+          "order": 8,
+          "context": "Samus, pink Brinstar, exploring the area east of the main hub",
+          "tags": [
+            "early-game",
+            "pink-brinstar",
+            "item-hunt",
+            "charge-beam",
+            "post-bombs",
+            "chozo-statue"
+          ],
+          "hints": [
+            "From the pink room, head right and drop all the way to the bottom.",
+            "At the bottom, look for destructible blocks near an obstruction. You'll need your bombs.",
+            "At the bottom of the pink room, [SPOILER: bomb the suspicious blocks in the obstruction, roll through, and shoot the marble in the Chozo statue's hand to claim the **Charge Beam**. You'll need this — regular shots won't hurt bosses anymore.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.3: To the Varia suit — Charge Beam",
+              "lines": "1251-1259",
+              "textFragment": "Welcome to the \"pink\" room. We'll be coming back now"
+            }
+          ]
+        },
+        {
+          "id": "spore-spawn-boss",
+          "title": "Defeating Spore Spawn",
+          "order": 9,
+          "context": "Samus, pink Brinstar, stuck on the swinging plant boss",
+          "tags": [
+            "early-game",
+            "pink-brinstar-upper",
+            "boss",
+            "spore-spawn",
+            "post-charge-beam",
+            "requires-missiles"
+          ],
+          "hints": [
+            "This boss swings back and forth. Watch for when it opens up to reveal its weak point.",
+            "When the **core** is exposed, that's your window to attack. **Charged shots** deal double damage here, or use missiles for faster kills.",
+            "Morph into a ball and stay in a corner to dodge the body. [SPOILER: Shoot spores for pickups. Attack the core only when it opens — 8 charged shots or 10 missiles to kill. After ~550 damage it speeds up significantly.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.3: To the Varia suit — Spore Spawn boss",
+              "lines": "1277-1305",
+              "textFragment": "Boss battle: Spore spawn.    Charged power beam: 120"
+            }
+          ]
+        },
+        {
+          "id": "getting-super-missiles",
+          "title": "Finding Super Missiles",
+          "order": 10,
+          "context": "Samus, pink Brinstar, defeated Spore Spawn but don't know where to go next",
+          "tags": [
+            "early-game",
+            "pink-brinstar-upper",
+            "item-hunt",
+            "super-missiles",
+            "post-spore-spawn",
+            "chozo-statue"
+          ],
+          "hints": [
+            "After defeating Spore Spawn, climb up through the chamber above.",
+            "Jump from platform to platform until you reach a door at the top.",
+            "At the top of the chamber above Spore Spawn, [SPOILER: go through the blue door to find the **Super Missiles** in a Chozo statue. These open green doors and deal massive damage.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.3: To the Varia suit — Super Missiles",
+              "lines": "1307-1320",
+              "textFragment": "After the battle, collect the leftover energy/missile"
+            }
+          ]
+        },
+        {
+          "id": "reaching-kraid",
+          "title": "Finding the Path to Kraid",
+          "order": 11,
+          "context": "Samus, Brinstar, have Super Missiles but don't know how to reach Kraid",
+          "tags": [
+            "early-game",
+            "red-brinstar",
+            "navigation",
+            "pre-varia-suit",
+            "requires-super-missiles",
+            "green-door"
+          ],
+          "hints": [
+            "Those green doors you've been seeing? Your new Super Missiles can open them.",
+            "Head back to the Brinstar hub area and look for green doors you couldn't open before.",
+            "From the Brinstar main shaft, [SPOILER: take the path down through red Brinstar. You'll need to use Super Missiles on green doors to progress deeper toward Kraid's lair. Follow the linear path through the red-tinted rooms.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.3: To the Varia suit — Path to Kraid",
+              "lines": "1320-1419",
+              "textFragment": "If you need to refill your supplies, do so on the"
+            }
+          ]
+        },
+        {
+          "id": "getting-spazer-beam",
+          "title": "Finding the Spazer Beam",
+          "order": 13,
+          "context": "Samus, Brinstar/Norfair approach, looking for a beam upgrade",
+          "tags": [
+            "mid-game",
+            "brinstar",
+            "spazer-beam",
+            "beam-upgrade",
+            "wall-jump"
+          ],
+          "hints": [
+            "The Spazer Beam is on the path between Brinstar and Norfair. You can get it before or after getting the Hi-Jump Boots, but having it makes Kraid's Lair much easier.",
+            "In the tall shaft that leads toward Norfair, look for a room with water at the bottom. You need to cross without falling in, then wall jump up to reach the Spazer Beam's room.",
+            "In the shaft before the Norfair elevator: [SPOILER: shoot the block above you in the water room, wall jump up to the ledge, bomb the first block but SHOOT (don't bomb) the second to avoid breaking the floor. Roll through to find the Chozo statue holding the Spazer Beam — it doubles your damage and widens your shot.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.3: To the Varia suit — Spazer Beam",
+              "lines": "1390-1410",
+              "textFragment": "the \"SPAZER BEAM\" (Wide beam.)"
+            }
+          ]
+        },
+        {
+          "id": "noob-bridge",
+          "title": "Crossing the Collapsing Bridge (Noob Bridge)",
+          "order": 14,
+          "context": "Samus, Brinstar, there's a bridge that keeps collapsing and dropping Samus into a pit",
+          "tags": [
+            "early-game",
+            "brinstar",
+            "navigation",
+            "dash",
+            "crumbling-blocks",
+            "common-question"
+          ],
+          "hints": [
+            "In Brinstar, there's a bridge made entirely of crumbling blocks that collapses the instant you step on it. This is one of the most common places for new players to get stuck.",
+            "The key is to **hold the Run/Dash button** while crossing. Running keeps you moving fast enough to cross before the blocks crumble.",
+            "Hold the Dash button the entire time as you cross the bridge. [SPOILER: If you keep running without stopping, you'll cross the crumbling blocks before they collapse. This is so commonly a problem for new players that speedrunners call it 'Noob Bridge.' If you fell in, wall jump back out or bomb jump to escape the pit below, then try again while holding Dash.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.4: Exploration of Norfair — Speed Booster run rooms",
+              "lines": "1740-1755",
+              "textFragment": "Hold down the run button the entire time so you won't fall"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kraids-lair",
+      "name": "Kraid's Lair",
+      "order": 4,
+      "situations": [
+        {
+          "id": "mini-kraid",
+          "title": "The Fake Kraid Encounter",
+          "order": 12,
+          "context": "Samus, Kraid's lair entrance, encountered a smaller version of Kraid",
+          "tags": [
+            "early-game",
+            "kraids-lair-entrance",
+            "boss",
+            "mini-kraid",
+            "pre-varia-suit",
+            "fake-boss"
+          ],
+          "hints": [
+            "This might look like the boss, but something seems off about its size...",
+            "This is a **fake Kraid** — a much weaker version. Just shoot it.",
+            "[SPOILER: Mini-Kraid is a decoy. 3 missiles or a few charged shots will kill it. The real Kraid is through the next door — save before entering.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.3: To the Varia suit — Mini-Kraid",
+              "lines": "1460-1473",
+              "textFragment": "In the elevator room, look at the right wall. Do those"
+            }
+          ]
+        },
+        {
+          "id": "kraid-boss",
+          "title": "Defeating Kraid",
+          "order": 13,
+          "context": "Samus, Kraid's lair, fighting the massive boss that fills the whole room",
+          "tags": [
+            "early-game",
+            "kraids-lair-boss-room",
+            "boss",
+            "kraid",
+            "pre-varia-suit",
+            "requires-missiles"
+          ],
+          "hints": [
+            "Kraid is huge — he fills the screen. Look for his vulnerable spot when he opens up.",
+            "When Kraid **opens his mouth**, that's your target. Missiles and Super Missiles work best. Avoid the projectiles from his belly.",
+            "Shoot missiles into his **open mouth** to damage him. [SPOILER: Super Missiles deal massive damage. After enough hits, platforms rise so you can reach his face. Keep shooting his mouth — he'll fire belly spikes (shoot them) and claw swipes. About 8-10 Super Missiles total to kill.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.3: To the Varia suit — Kraid boss",
+              "lines": "1519-1575",
+              "textFragment": "Boss battle: Kraid.           Charged spazer beam:"
+            }
+          ]
+        },
+        {
+          "id": "getting-varia-suit",
+          "title": "Finding the Varia Suit",
+          "order": 14,
+          "context": "Samus, Kraid's lair, defeated Kraid and looking for the next upgrade",
+          "tags": [
+            "early-game",
+            "kraids-lair-post-boss",
+            "item-hunt",
+            "varia-suit",
+            "post-kraid",
+            "chozo-statue"
+          ],
+          "hints": [
+            "After Kraid falls, there's a path that wasn't accessible before.",
+            "Look for the **Chozo statue** in the room beyond where Kraid stood.",
+            "In the room after Kraid's boss chamber, [SPOILER: collect the **Varia Suit** from the Chozo statue. This halves all damage and lets you survive Norfair's heat without taking constant damage.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.3: To the Varia suit — Varia Suit",
+              "lines": "1575-1593",
+              "textFragment": "Once you claim the item, you will notice it's effects"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "norfair-upper",
+      "name": "Norfair (Upper)",
+      "order": 5,
+      "situations": [
+        {
+          "id": "reaching-norfair",
+          "title": "Getting to Norfair",
+          "order": 15,
+          "context": "Samus, Brinstar, have Varia Suit but don't know how to reach Norfair",
+          "tags": [
+            "mid-game",
+            "brinstar-to-norfair",
+            "navigation",
+            "post-varia-suit",
+            "elevator",
+            "requires-super-missiles"
+          ],
+          "hints": [
+            "With the Varia Suit, you can now survive in hot areas. Look for an elevator you haven't used yet.",
+            "Head back through Brinstar toward the main hub. There's an elevator leading down.",
+            "[SPOILER: From Kraid's area, backtrack through Brinstar. The elevator to Norfair is at the bottom of the green Brinstar main shaft, through the lower areas.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.4: Exploration of Norfair — Arrival",
+              "lines": "1593-1630",
+              "textFragment": "4.4: Exploration of Norfair."
+            }
+          ]
+        },
+        {
+          "id": "getting-hi-jump-boots",
+          "title": "Finding the Hi-Jump Boots",
+          "order": 16,
+          "context": "Samus, upper Norfair, exploring the heated rooms and can't reach high platforms",
+          "tags": [
+            "mid-game",
+            "norfair-upper",
+            "item-hunt",
+            "hi-jump-boots",
+            "post-varia-suit",
+            "chozo-statue"
+          ],
+          "hints": [
+            "There's a movement upgrade in this area that will make reaching high platforms much easier.",
+            "Look for a room with a **Chozo statue** — you may need to bomb or missile your way through some walls.",
+            "In upper Norfair, [SPOILER: find the Hi-Jump Boots in a Chozo statue room. These let you jump significantly higher, opening up previously unreachable paths.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.4: Exploration of Norfair — Hi-Jump Boots",
+              "lines": "1630-1700",
+              "textFragment": "Continue to the right, climb the ledges at the end,"
+            }
+          ]
+        },
+        {
+          "id": "getting-speed-booster",
+          "title": "Finding the Speed Booster",
+          "order": 17,
+          "context": "Samus, upper Norfair, exploring and looking for a way to break speed blocks",
+          "tags": [
+            "mid-game",
+            "norfair-upper",
+            "item-hunt",
+            "speed-booster",
+            "post-hi-jump",
+            "chozo-statue"
+          ],
+          "hints": [
+            "One of the most powerful movement abilities is hidden in Norfair. Keep exploring the upper areas.",
+            "You need to find the **Speed Booster** — it's in a Chozo statue deeper in the Norfair tunnels.",
+            "Continue exploring upper Norfair's rooms. [SPOILER: The Speed Booster is in a Chozo statue room. Hold dash to build up speed — after running long enough, you'll glow blue and can smash through special blocks and enemies.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.4: Exploration of Norfair — Speed Booster",
+              "lines": "1700-1780",
+              "textFragment": "incline, and not too low or you won't even reach it."
+            }
+          ]
+        },
+        {
+          "id": "getting-ice-beam",
+          "title": "Finding the Ice Beam",
+          "order": 18,
+          "context": "Samus, upper Norfair, looking for beam upgrades",
+          "tags": [
+            "mid-game",
+            "norfair-upper",
+            "item-hunt",
+            "ice-beam",
+            "post-speed-booster",
+            "hidden-path"
+          ],
+          "hints": [
+            "A powerful beam upgrade is hidden behind some tricky navigation in Norfair.",
+            "The **Ice Beam** lets you freeze enemies — including using them as platforms. Look for it in the Norfair rooms you haven't fully explored.",
+            "The Ice Beam is found in [SPOILER: a room in upper Norfair. You'll need to navigate through heated rooms and use missiles to open doors. The Ice Beam freezes enemies solid — essential for reaching certain areas later.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.4: Exploration of Norfair — Ice Beam",
+              "lines": "1780-1860",
+              "textFragment": "In this room, there are three boyons on the floor."
+            }
+          ]
+        },
+        {
+          "id": "getting-power-bombs",
+          "title": "Finding Power Bombs",
+          "order": 19,
+          "context": "Samus, Norfair/Brinstar, seeing yellow doors that won't open with anything",
+          "tags": [
+            "mid-game",
+            "norfair-upper",
+            "item-hunt",
+            "power-bombs",
+            "post-speed-booster",
+            "yellow-doors"
+          ],
+          "hints": [
+            "Those yellow doors need a special weapon you haven't found yet. Keep exploring.",
+            "**Power Bombs** destroy yellow doors and blast everything in the room. They're hidden in the areas between Norfair and Brinstar.",
+            "[SPOILER: Power Bombs are found in the rooms connecting upper Norfair. They open yellow doors and can destroy many hidden walls. Lay them in Morph Ball form — they have a huge blast radius.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.5: Item hunt — Power Bombs",
+              "lines": "2107-2200",
+              "textFragment": "4.5: Item hunt."
+            }
+          ]
+        },
+        {
+          "id": "getting-wave-beam",
+          "title": "Finding the Wave Beam",
+          "order": 19,
+          "context": "Samus, Norfair, looking for more beam upgrades after Speed Booster",
+          "tags": [
+            "mid-game",
+            "norfair",
+            "wave-beam",
+            "beam-upgrade",
+            "speed-booster"
+          ],
+          "hints": [
+            "The Wave Beam is in Upper Norfair, reachable after getting the Speed Booster. You'll need to use a speed boost run to access the area.",
+            "From the 'bubble room' in Norfair, take the route through the bomb tunnel. Use the Speed Booster to run through shutters that were previously impassable, then navigate the vertical shaft beyond.",
+            "In the bubble room, go through the bomb tunnel. [SPOILER: Use the Speed Booster to dash through the shutters, then navigate the spike-lined rooms. In the shaft, climb to a red door — inside is the Chozo statue with the Wave Beam. It adds 100% damage AND lets your beam pass through walls.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.4: Exploration of Norfair — Wave Beam",
+              "lines": "1700-1720",
+              "textFragment": "the \"WAVE BEAM\"! Now, not only is you're beam"
+            }
+          ]
+        },
+        {
+          "id": "crocomire-boss",
+          "title": "Defeating Crocomire",
+          "order": 20,
+          "context": "Samus, Norfair, encountered a large reptilian boss that blocks the path",
+          "tags": [
+            "mid-game",
+            "norfair",
+            "boss",
+            "crocomire",
+            "missiles"
+          ],
+          "hints": [
+            "Crocomire doesn't have traditional HP — he takes a step back each time you hit him. Your goal is to push him backward into the acid pit behind him. **Do NOT use Power Bombs** — they enrage him.",
+            "Use **Missiles** (one step back each) or **Super Missiles** (three steps) when he opens his mouth. Shoot his fireballs for pickups. Keep pushing him back toward the acid.",
+            "Fire missiles into Crocomire's mouth whenever he opens it — each hit pushes him back one step. [SPOILER: Keep herding him back until he reaches the weak bridge, which collapses under his weight. He falls into the acid and melts. Afterward, his skeleton crashes through the spike wall on the left — but it's just a scare, he's dead. Collect the items beyond.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.4: Exploration of Norfair — Crocomire Boss",
+              "lines": "1908-1952",
+              "textFragment": "Boss battle: Crocomire."
+            }
+          ]
+        },
+        {
+          "id": "getting-grapple-beam",
+          "title": "Finding the Grapple Beam",
+          "order": 21,
+          "context": "Samus, Norfair, past Crocomire's room and looking for more items",
+          "tags": [
+            "mid-game",
+            "norfair",
+            "grapple-beam",
+            "shinespark",
+            "speed-booster"
+          ],
+          "hints": [
+            "The Grapple Beam is in Norfair, accessible after defeating Crocomire. You'll need the Speed Booster to reach it.",
+            "In the room past Crocomire's area, there's a ramp — you need to use a **Shinespark** or timed speed boost jump to reach the upper ledge where the Grapple Beam awaits.",
+            "In the post-Crocomire room: [SPOILER: start a hyper-run up the ramp, store the charge as soon as you get on the ramp, then Shinespark straight up to the ceiling. At the top, hold right to grab Missiles, then go back and do another hyper-run — jump at the ramp's end to arc up to the left ledge. The Grapple Beam is in the Chozo statue through that door.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.4: Exploration of Norfair — Grapple Beam",
+              "lines": "1975-1998",
+              "textFragment": "Shoot the Chozo statues marble to claim the \"GRAPPLING BEAM\""
+            }
+          ]
+        },
+        {
+          "id": "getting-xray-scope",
+          "title": "Finding the X-Ray Scope",
+          "order": 22,
+          "context": "Samus, Brinstar, looking for hidden items and the X-Ray visor",
+          "tags": [
+            "mid-game",
+            "brinstar",
+            "x-ray-scope",
+            "grapple-beam",
+            "fire-fleas"
+          ],
+          "hints": [
+            "The X-Ray Scope is in a hidden room accessed from the red Brinstar shaft. You need the Grapple Beam and Power Bombs to reach it.",
+            "In the red shaft, look for a large block on the left wall. Use a Power Bomb to destroy it and the yellow door behind it. The room beyond has fire fleas (don't kill them or it goes dark) and grapple blocks over spike pits.",
+            "Power Bomb the block wall in the red Brinstar shaft, then enter the yellow door. [SPOILER: Grapple across the spike pits carefully — DON'T kill the fire fleas or the room goes dark. At the far end, blast the red door with a Super Missile. Inside, step on the platform and lay a bomb to raise a shutter, then roll through the tunnel to the Chozo statue holding the X-Ray Scope.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.4: Exploration of Norfair — X-Ray Scope",
+              "lines": "2060-2090",
+              "textFragment": "the somewhat useless \"X-RAY SCOPE\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wrecked-ship",
+      "name": "Wrecked Ship",
+      "order": 6,
+      "situations": [
+        {
+          "id": "reaching-wrecked-ship",
+          "title": "Finding the Wrecked Ship",
+          "order": 20,
+          "context": "Samus, Crateria, have many upgrades but haven't been to the Wrecked Ship area",
+          "tags": [
+            "mid-game",
+            "crateria-west",
+            "navigation",
+            "wrecked-ship-entrance",
+            "requires-power-bombs",
+            "post-speed-booster"
+          ],
+          "hints": [
+            "Remember that area in Crateria you couldn't access before? Your new abilities might open a path.",
+            "Head back to **Crateria** and explore west. You'll need Power Bombs to clear certain obstacles.",
+            "From Crateria's landing site, [SPOILER: head left past where you first entered. Use Power Bombs on the yellow doors and destructible walls. The Wrecked Ship is through the watery area on the far west side of Crateria.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.6: The wrecked ship — Getting there",
+              "lines": "2340-2400",
+              "textFragment": "4.6: The wrecked ship."
+            }
+          ]
+        },
+        {
+          "id": "wrecked-ship-power-off",
+          "title": "The Wrecked Ship Has No Power",
+          "order": 21,
+          "context": "Samus, Wrecked Ship, everything is dark and doors won't open",
+          "tags": [
+            "mid-game",
+            "wrecked-ship-interior",
+            "navigation",
+            "puzzle",
+            "power-off",
+            "ghost-enemies"
+          ],
+          "hints": [
+            "The ship's power is offline, which is why most things aren't working. There's a boss causing this.",
+            "You need to defeat the ghost boss **Phantoon** to restore power. Look for a way deeper into the ship.",
+            "Navigate the dark ship to find [SPOILER: Phantoon in the central area. Some doors still work — keep trying doors and using bombs to find paths. Once Phantoon is defeated, all the ship's systems come online.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.6: The wrecked ship — No power",
+              "lines": "2400-2480",
+              "textFragment": "(135.) at the end. Head back to the main deck."
+            }
+          ]
+        },
+        {
+          "id": "phantoon-boss",
+          "title": "Defeating Phantoon",
+          "order": 22,
+          "context": "Samus, Wrecked Ship, fighting the invisible ghost boss",
+          "tags": [
+            "mid-game",
+            "wrecked-ship-boss-room",
+            "boss",
+            "phantoon",
+            "requires-missiles",
+            "ghost-boss"
+          ],
+          "hints": [
+            "Phantoon is a ghost that appears and disappears. Watch for its pattern — it's vulnerable when its eye opens.",
+            "Hit Phantoon's **eye** with missiles when it appears. Do NOT use Super Missiles — they make it go berserk with fireballs.",
+            "When Phantoon's eye opens, [SPOILER: hit it with regular missiles (NOT Super Missiles, which trigger a devastating fireball attack). It follows a circular pattern — learn the timing. Dodge the blue flames by staying mobile. About 12-15 missiles to kill.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.6: The wrecked ship — Phantoon boss",
+              "lines": "2480-2560",
+              "textFragment": "That's an interesting tip. I did hear rumors about a"
+            }
+          ]
+        },
+        {
+          "id": "getting-gravity-suit",
+          "title": "Finding the Gravity Suit",
+          "order": 23,
+          "context": "Samus, Wrecked Ship, defeated Phantoon and power is back on",
+          "tags": [
+            "mid-game",
+            "wrecked-ship-post-phantoon",
+            "item-hunt",
+            "gravity-suit",
+            "post-phantoon",
+            "chozo-statue"
+          ],
+          "hints": [
+            "With the ship powered up, many new doors are accessible. A crucial suit upgrade is somewhere in the ship.",
+            "Explore the rooms that were previously locked. The **Gravity Suit** is in one of them.",
+            "With power restored, [SPOILER: explore the newly accessible rooms of the Wrecked Ship. The Gravity Suit is in a Chozo statue room — it lets you move normally underwater and in lava, which is essential for Maridia.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.6: The wrecked ship — Gravity Suit",
+              "lines": "2560-2700",
+              "textFragment": "a few hits, and dish out some damage themselves. Blast"
+            }
+          ]
+        },
+        {
+          "id": "wrecked-ship-reserve-tank",
+          "title": "The Walking Chozo Statue and Reserve Tank",
+          "order": 28,
+          "context": "Samus, Wrecked Ship, found a huge spike-floored room with grapple blocks",
+          "tags": [
+            "mid-game",
+            "wrecked-ship",
+            "reserve-tank",
+            "chozo-statue",
+            "grapple-beam",
+            "shinespark"
+          ],
+          "hints": [
+            "There's a massive room in the Wrecked Ship with spikes covering the entire floor. You need the Grapple Beam to cross it, and what you find at the end is... unusual.",
+            "Grapple across the spike room to the Chozo statue at the far end. It has nothing in its hand — jump on its hand and morph into a ball. The statue will carry you to a secret area below.",
+            "Grapple across the spike room to the empty-handed Chozo statue. [SPOILER: Morph ball on its hand — it comes alive and walks you across the spikes to a hidden underground area. Down there, bomb the floor to access a tunnel leading right. Use a Power Bomb, clear the path, then Shinespark up a shaft. Walk left through crumbling blocks to find a Reserve Tank. The Gravity Suit is also through the left door nearby.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.6: The wrecked ship — Reserve Tank and Gravity Suit",
+              "lines": "2610-2660",
+              "textFragment": "How do you get across? You grapple across, silly."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maridia",
+      "name": "Maridia",
+      "order": 7,
+      "situations": [
+        {
+          "id": "reaching-maridia",
+          "title": "Getting to Maridia",
+          "order": 24,
+          "context": "Samus, have Gravity Suit but don't know how to reach Maridia",
+          "tags": [
+            "mid-game",
+            "brinstar-to-maridia",
+            "navigation",
+            "requires-gravity-suit",
+            "underwater-area",
+            "glass-tunnel"
+          ],
+          "hints": [
+            "Maridia is the underwater area. You'll need the Gravity Suit to navigate it properly.",
+            "There's a breakable glass tunnel connecting Brinstar to Maridia. Try using a **Power Bomb** in certain tube-like rooms.",
+            "[SPOILER: In the glass tube between Brinstar and Maridia, use a Power Bomb to shatter the tube and drain the water, opening the path to Maridia. You can also access it from the Wrecked Ship area.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.7: Maridia — Getting there",
+              "lines": "2762-2830",
+              "textFragment": "4.7: Maridia: The watery world of wonder."
+            }
+          ]
+        },
+        {
+          "id": "maridia-navigation",
+          "title": "Navigating Maridia's Underwater Maze",
+          "order": 25,
+          "context": "Samus, Maridia, underwater rooms all look similar and keep getting lost",
+          "tags": [
+            "mid-game",
+            "maridia-main",
+            "navigation",
+            "underwater",
+            "post-gravity-suit",
+            "sand-pits"
+          ],
+          "hints": [
+            "Maridia is large and confusing. Watch out for quicksand floors that pull you down — some lead to new areas.",
+            "The quicksand isn't always bad — some **sand pits** drop you to lower levels where items and progression paths are hidden.",
+            "In Maridia, [SPOILER: let the sand pull you down in certain rooms to reach lower areas. Use your map to keep track of where you've been. The main path goes deeper and to the right toward the Grapple Beam and eventually Draygon.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.7: Maridia — Navigation",
+              "lines": "2830-2950",
+              "textFragment": "After you grab the missile pack, hold left as you fall"
+            }
+          ]
+        },
+        {
+          "id": "getting-grapple-beam",
+          "title": "Finding the Grapple Beam",
+          "order": 26,
+          "context": "Samus, Maridia/Norfair, seeing grapple points on ceilings but can't use them",
+          "tags": [
+            "mid-game",
+            "norfair-grapple-room",
+            "item-hunt",
+            "grapple-beam",
+            "post-gravity-suit",
+            "chozo-statue"
+          ],
+          "hints": [
+            "Those blocks on the ceiling with the flashing circles are grapple points. You need a special beam to use them.",
+            "The **Grapple Beam** is actually found in upper Norfair, not Maridia.",
+            "[SPOILER: Return to upper Norfair and explore rooms you may have missed. The Grapple Beam is in a Chozo statue room. It lets you swing from grapple points — essential for traversing Maridia's large rooms.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.7: Maridia — Grapple Beam",
+              "lines": "2950-3010",
+              "textFragment": "Another new enemy is in here, and one that closely"
+            }
+          ]
+        },
+        {
+          "id": "getting-space-jump",
+          "title": "Finding the Space Jump",
+          "order": 27,
+          "context": "Samus, Maridia, can't reach certain high areas even with Hi-Jump and wall jumping",
+          "tags": [
+            "mid-game",
+            "maridia-deep",
+            "item-hunt",
+            "space-jump",
+            "post-grapple-beam",
+            "post-draygon"
+          ],
+          "hints": [
+            "The ultimate movement upgrade in the game lets you jump infinitely. It's guarded by a boss.",
+            "Defeat the boss **Draygon** first — the Space Jump is your reward.",
+            "After defeating Draygon, [SPOILER: the Space Jump is in the room beyond. It lets you spin jump repeatedly in mid-air indefinitely — no more worrying about platforming gaps.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.7: Maridia — Space Jump",
+              "lines": "3100-3160",
+              "textFragment": "the electricity will fry Draygon, killing him"
+            }
+          ]
+        },
+        {
+          "id": "draygon-boss",
+          "title": "Defeating Draygon",
+          "order": 28,
+          "context": "Samus, Maridia boss room, fighting the large aquatic creature",
+          "tags": [
+            "mid-game",
+            "maridia-boss-room",
+            "boss",
+            "draygon",
+            "requires-gravity-suit",
+            "underwater-boss"
+          ],
+          "hints": [
+            "This boss grabs you and swings you around. There's a conventional way and a clever trick to beat it.",
+            "There are exposed **electrical conduits** on the walls. If you get grabbed, you might be able to use them...",
+            "Two strategies: [SPOILER: 1) Shoot Draygon's belly with missiles/charged shots when it swoops. 2) The easy way — let Draygon grab you, then grapple an exposed electrical panel on the wall. The electricity kills Draygon in seconds.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.7: Maridia — Draygon boss",
+              "lines": "3060-3100",
+              "textFragment": "At the bottom of the room, head left, ignoring the"
+            }
+          ]
+        },
+        {
+          "id": "botwoon-boss",
+          "title": "Defeating Botwoon",
+          "order": 34,
+          "context": "Samus, Maridia, encountered a giant serpent blocking the path forward",
+          "tags": [
+            "mid-game",
+            "maridia",
+            "boss",
+            "botwoon",
+            "serpent"
+          ],
+          "hints": [
+            "Botwoon is a serpent boss — only **headshots** damage it. The rest of its body is completely invulnerable. Use Super Missiles or charged beam shots.",
+            "Stay on the left side of the room to avoid body contact. Aim carefully at the head — Super Missiles and charged Spazer/Ice/Wave shots both deal 300 damage. At 1200 HP and 600 HP remaining, it speeds up significantly.",
+            "Botwoon has 3000 HP. [SPOILER: Use Super Missiles for reliable headshots (10 kills it). Stay far left where its body can't reach you. It stops using poison bolts below 600 HP, so just stay left and land a few more headshots. After it dies, the wall collapses — there's an Energy Tank in the sandy room to the right if you jump to the tunnel above the quicksand.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.7: Maridia — Botwoon Boss",
+              "lines": "2968-3010",
+              "textFragment": "Boss battle: Botwoon."
+            }
+          ]
+        },
+        {
+          "id": "getting-spring-ball",
+          "title": "Finding the Spring Ball",
+          "order": 35,
+          "context": "Samus, Maridia, deep in the sandy tunnels looking for upgrades",
+          "tags": [
+            "mid-game",
+            "maridia",
+            "spring-ball",
+            "shaktool",
+            "sand"
+          ],
+          "hints": [
+            "The Spring Ball is deep in Maridia, past a room with a unique robot ally called Shaktool. You need Power Bombs to reach it.",
+            "In a sandy room in Maridia, lay a Power Bomb to reveal a wall on the right. A mechanical creature called **Shaktool** will begin digging through the sand for you — **don't shoot it**, just follow it.",
+            "In the deep Maridia room: [SPOILER: Power Bomb the right wall to release Shaktool, then follow it as it digs through the sand. In the room beyond, morph ball into the tunnel and navigate the winding passages. The Chozo statue at the bottom holds the Spring Ball — it lets you jump while in morph ball form, eliminating the need for bomb jumps in tight spaces.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.7: Maridia — Spring Ball",
+              "lines": "3150-3200",
+              "textFragment": "claim the \"SPRING BALL\", a nifty item"
+            }
+          ]
+        },
+        {
+          "id": "getting-plasma-beam",
+          "title": "Finding the Plasma Beam",
+          "order": 36,
+          "context": "Samus, Maridia, defeated Draygon and looking for the strongest beam",
+          "tags": [
+            "late-game",
+            "maridia",
+            "plasma-beam",
+            "beam-upgrade",
+            "space-pirates"
+          ],
+          "hints": [
+            "The Plasma Beam is in a hidden area of Maridia, accessible after getting the Space Jump. Look for a shaft with Choots and Puyos.",
+            "Climb the shaft and go right — you'll find a room full of pink Space Pirates that seem invincible. The Plasma Beam is at the bottom of this very room, in a Chozo statue.",
+            "In the Maridia shaft past Draygon: [SPOILER: climb to the top and go right. In the pink pirate room, the door locks behind you — drop to the very bottom and shoot the Chozo statue's marble for the Plasma Beam. It's 3x stronger than Spazer, pierces through enemies, and replaces Spazer automatically. Kill all the pirates to unlock the door.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.7: Maridia — Plasma Beam",
+              "lines": "3220-3250",
+              "textFragment": "IT IS! The \"PLASMA BEAM\"! This godly weapon is 3x as powerful"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "norfair-lower",
+      "name": "Norfair (Lower / Ridley)",
+      "order": 8,
+      "situations": [
+        {
+          "id": "reaching-lower-norfair",
+          "title": "Getting to Lower Norfair",
+          "order": 29,
+          "context": "Samus, upper Norfair, can see a path to deeper areas but it's blocked or too hot",
+          "tags": [
+            "late-game",
+            "norfair-lower-entrance",
+            "navigation",
+            "requires-gravity-suit",
+            "lava-rooms",
+            "post-space-jump"
+          ],
+          "hints": [
+            "Lower Norfair requires serious heat protection. Make sure you have the right suit.",
+            "You need the **Gravity Suit** to survive the lava rooms. The entrance is through the deeper parts of upper Norfair.",
+            "[SPOILER: From upper Norfair, take the path down through the lava-filled rooms. The Gravity Suit prevents lava damage. You'll need Space Jump and/or Grapple Beam to navigate some rooms. The path leads to Ridley's domain.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.8: Lower Norfair — Getting there",
+              "lines": "3343-3420",
+              "textFragment": "4.8: Lower Norfair: Rematch."
+            }
+          ]
+        },
+        {
+          "id": "getting-screw-attack",
+          "title": "Finding the Screw Attack",
+          "order": 30,
+          "context": "Samus, lower Norfair, exploring the hot rooms and looking for the final upgrades",
+          "tags": [
+            "late-game",
+            "norfair-lower",
+            "item-hunt",
+            "screw-attack",
+            "post-gravity-suit",
+            "chozo-statue"
+          ],
+          "hints": [
+            "The most powerful attack ability in the game is hidden in lower Norfair.",
+            "The **Screw Attack** turns your spin jump into a devastating weapon. It's in a Chozo statue room.",
+            "In lower Norfair, [SPOILER: find the Screw Attack in a Chozo statue room. With it, your spin jump destroys almost everything on contact — enemies, blocks, and bosses alike.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.8: Lower Norfair — Screw Attack",
+              "lines": "3420-3500",
+              "textFragment": "at the elevator."
+            }
+          ]
+        },
+        {
+          "id": "ridley-boss",
+          "title": "Defeating Ridley",
+          "order": 31,
+          "context": "Samus, lower Norfair, facing Ridley in his lair",
+          "tags": [
+            "late-game",
+            "norfair-ridley-lair",
+            "boss",
+            "ridley",
+            "requires-missiles",
+            "requires-energy-tanks"
+          ],
+          "hints": [
+            "Ridley is much tougher than the Ceres version. Stock up on missiles and energy tanks before this fight.",
+            "Ridley's **tail** is deadly. Stay above him and fire down. **Charged plasma beam** shots deal massive damage if you have it.",
+            "Fire missiles or charged shots at Ridley's body. [SPOILER: His tail pogo attack is the most dangerous — jump to avoid it. He changes color as he takes damage (brown → red → flashing). About 18 Super Missiles or 40+ missiles to kill. Bring plenty of energy tanks.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.8: Lower Norfair — Ridley boss",
+              "lines": "3550-3700",
+              "textFragment": "through the blue door. Claim the pack of \"POWER BOMBS\""
+            }
+          ]
+        },
+        {
+          "id": "golden-torizo-boss",
+          "title": "Defeating the Golden Torizo",
+          "order": 41,
+          "context": "Samus, Lower Norfair, a golden Chozo statue dropped from the ceiling and came alive",
+          "tags": [
+            "late-game",
+            "lower-norfair",
+            "boss",
+            "golden-torizo",
+            "screw-attack"
+          ],
+          "hints": [
+            "The Golden Torizo guards the Screw Attack. It's a much tougher version of the Crateria Torizo. **Don't use Super Missiles** — it catches them and throws them back at you!",
+            "Use **charged Plasma/Ice/Wave shots** exclusively — they deal 900 damage each. Golden Torizo has 13,500 HP, so 15 charged shots kills it. Space Jump to dodge its energy waves.",
+            "Charge your Plasma/Ice/Wave beam and fire when you have a clear shot — 15 hits kills it. [SPOILER: Space Jump to dodge energy waves (it fires 8 rapidly). If it corners you, jump over it but NOT in the middle of the room — it jumps randomly. Shoot its thrown bombs for pickups. After it dies, check the ceiling where it dropped from — Power Bomb up there for the last Super Missile pack, then enter the room it was guarding for the Screw Attack!]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.8: Lower Norfair — Golden Torizo Boss",
+              "lines": "3429-3510",
+              "textFragment": "Boss battle: Golden Torizo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tourian",
+      "name": "Tourian",
+      "order": 9,
+      "situations": [
+        {
+          "id": "reaching-tourian",
+          "title": "Opening the Path to Tourian",
+          "order": 32,
+          "context": "Samus, Crateria, defeated all four bosses but don't know how to reach the final area",
+          "tags": [
+            "late-game",
+            "crateria-tourian-entrance",
+            "navigation",
+            "requires-all-bosses",
+            "golden-statues"
+          ],
+          "hints": [
+            "You need to defeat all four main bosses before the final area opens. Have you beaten them all?",
+            "The four bosses are **Kraid**, **Phantoon**, **Draygon**, and **Ridley**. Once all are dead, a golden statue in Crateria unlocks.",
+            "After all four bosses are dead, [SPOILER: return to Crateria and find the room with the four golden boss statues (near the old Tourian entrance). They'll crumble, revealing the elevator down to Tourian.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.9: Tourian — Golden statues",
+              "lines": "3769-3830",
+              "textFragment": "4.9:  Tourian: The legendary battle."
+            }
+          ]
+        },
+        {
+          "id": "tourian-metroids",
+          "title": "Dealing with the Metroids in Tourian",
+          "order": 33,
+          "context": "Samus, Tourian, Metroids keep latching on and draining energy rapidly",
+          "tags": [
+            "late-game",
+            "tourian-metroid-rooms",
+            "navigation",
+            "metroids",
+            "requires-ice-beam",
+            "requires-missiles"
+          ],
+          "hints": [
+            "Metroids are extremely dangerous. There's a specific weapon combination that works against them.",
+            "**Freeze** them first, then hit them with missiles. The Ice Beam is essential here.",
+            "To kill a Metroid: [SPOILER: freeze it with the Ice Beam, then hit it with 5 missiles (or 1 Super Missile) while frozen. If it latches on, lay bombs to shake it off. Stock up on energy — each Metroid encounter drains health fast.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.9: Tourian — Metroids",
+              "lines": "3830-3900",
+              "textFragment": "Continue to the left, CAREFULLY picking off each"
+            }
+          ]
+        },
+        {
+          "id": "mother-brain-boss",
+          "title": "Defeating Mother Brain",
+          "order": 34,
+          "context": "Samus, Tourian, facing Mother Brain",
+          "tags": [
+            "endgame",
+            "tourian-mother-brain",
+            "boss",
+            "mother-brain",
+            "final-boss",
+            "requires-missiles"
+          ],
+          "hints": [
+            "This is a multi-phase fight. The first phase should be familiar if you played the original Metroid.",
+            "Phase 1: Destroy the glass tank with missiles. Phase 2: Mother Brain stands up — keep shooting. Phase 3: Something unexpected happens...",
+            "Phase 1: [SPOILER: Destroy the Rinkas and glass tube with missiles. Phase 2: Mother Brain emerges as a giant creature — shoot its head with everything you have. Phase 3: Mother Brain fires a devastating rainbow beam that drains you to near death. The baby Metroid from Ceres arrives, drains Mother Brain's energy, and gives it to you as the Hyper Beam — use it to annihilate Mother Brain.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.9: Tourian — Mother Brain boss",
+              "lines": "3900-4100",
+              "textFragment": "is also what made it so agressive. It did not realize"
+            }
+          ]
+        },
+        {
+          "id": "final-escape",
+          "title": "Escaping Planet Zebes",
+          "order": 35,
+          "context": "Samus, Tourian, defeated Mother Brain and self-destruct is counting down",
+          "tags": [
+            "endgame",
+            "zebes-escape",
+            "navigation",
+            "timed-sequence",
+            "escape",
+            "requires-speed-booster"
+          ],
+          "hints": [
+            "You have 3 minutes to escape the entire planet. Retrace your path upward quickly.",
+            "Use your **Speed Booster** and **Space Jump** to move fast. Some walls are destructible with your new beam.",
+            "Race upward through Tourian and Crateria. [SPOILER: The Hyper Beam destroys nearly everything. Speed Boost through corridors, Space Jump up shafts. Follow the flashing arrows. Save the Etecoons and Dachoras by going through the side passage before reaching your ship — they'll fly away in a separate ship during the ending.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.9 1/2: Ending — Escape",
+              "lines": "4100-4200",
+              "textFragment": "Aim straight up and witness the Hyper beams power as"
+            }
+          ]
+        },
+        {
+          "id": "baby-metroid-sacrifice",
+          "title": "The Baby Metroid Encounter",
+          "order": 46,
+          "context": "Samus, Tourian, encountered a giant Metroid that latched onto Samus",
+          "tags": [
+            "late-game",
+            "tourian",
+            "metroid",
+            "story",
+            "baby-metroid",
+            "cutscene"
+          ],
+          "hints": [
+            "In Tourian, you'll encounter a giant Metroid that seems completely immune to all your weapons. Don't panic — this is a scripted encounter.",
+            "The giant Metroid is actually the baby Metroid from Ceres Station, now enormous from absorbing unlimited energy. You cannot defeat it — it will drain your energy.",
+            "This is a story event. [SPOILER: The baby Metroid will latch onto you and drain your energy. You cannot fight it off — just let it happen. At your very last point of energy, it will recognize you as its mother and release you. It will leave the room. This encounter sets up the final Mother Brain fight.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "4.9: Tourian — Baby Metroid Encounter",
+              "lines": "3870-3920",
+              "textFragment": "is also what made it so agressive. It did not realize who you were"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "techniques",
+      "name": "Essential Techniques",
+      "order": 10,
+      "situations": [
+        {
+          "id": "wall-jumping",
+          "title": "How to Wall Jump",
+          "order": 36,
+          "context": "Samus, various areas, can see high ledges but can't reach them with normal jumps",
+          "tags": [
+            "early-game",
+            "any-location",
+            "navigation",
+            "wall-jump-required",
+            "technique",
+            "movement-ability"
+          ],
+          "hints": [
+            "There's a technique that lets you climb any wall by jumping off it repeatedly. No special item needed.",
+            "**Wall jumping**: spin jump toward a wall, then press the opposite direction + jump at the moment you touch it.",
+            "To wall jump: [SPOILER: spin jump into a wall, then QUICKLY press the direction AWAY from the wall and press jump. Timing is key — don't press both at the exact same time. The Etecoons in the green room in Brinstar will teach you this technique.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "3.1: Abilities — Wall Jump",
+              "lines": "238-310",
+              "textFragment": "3.1: Abilities."
+            }
+          ]
+        },
+        {
+          "id": "shinesparking",
+          "title": "How to Shinespark",
+          "order": 37,
+          "context": "Samus, various areas, have Speed Booster but don't know how to store a charge",
+          "tags": [
+            "mid-game",
+            "any-location",
+            "technique",
+            "shinespark-puzzle",
+            "requires-speed-booster",
+            "movement-ability"
+          ],
+          "hints": [
+            "The Speed Booster has a hidden ability — you can store the speed charge and launch in any direction.",
+            "While running at full **Speed Booster** speed (glowing blue), press **down** to crouch and store the charge. Then jump and press a direction to launch.",
+            "To Shinespark: [SPOILER: build up Speed Booster speed (run until glowing blue), press DOWN to store the charge (you'll flash). Within about 4 seconds, jump and hold UP to launch vertically, or press left/right in mid-air to launch horizontally. This is needed to reach many hidden items.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "3.1: Abilities — Shinespark",
+              "lines": "310-380",
+              "textFragment": "relatively clear shafts. You don't have any recovery"
+            }
+          ]
+        },
+        {
+          "id": "bomb-jumping",
+          "title": "How to Bomb Jump",
+          "order": 52,
+          "context": "Player wants to learn bomb jumping to reach higher areas",
+          "tags": [
+            "technique",
+            "bombs",
+            "morph-ball",
+            "sequence-break",
+            "vertical-movement"
+          ],
+          "hints": [
+            "Bomb jumping lets you gain height while in morph ball form. It's essential for reaching some items early and navigating certain areas.",
+            "The basic technique: lay a bomb, wait for it to detonate (it launches you upward), then at the peak of the bounce, lay another bomb. The timing is tight but consistent.",
+            "To bomb jump: morph ball → lay bomb → [SPOILER: when the bomb launches you upward, lay another bomb at the peak of the bounce. The second bomb explodes as you fall back down, launching you higher. Repeat for continuous vertical movement. The timing window is about half a second between each bomb. For horizontal bomb jumps, hold a direction while bouncing. This technique becomes unnecessary once you get the Space Jump, but it's vital early on.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "3.1: Abilities — Bomb Jump",
+              "lines": "325-380",
+              "textFragment": "Once you obtain the bombs, you can start bomb jumping"
+            }
+          ]
+        },
+        {
+          "id": "crystal-flash",
+          "title": "How to Perform a Crystal Flash",
+          "order": 53,
+          "context": "Player is extremely low on health and wants to know about emergency energy recovery",
+          "tags": [
+            "technique",
+            "crystal-flash",
+            "emergency",
+            "energy",
+            "power-bombs",
+            "advanced"
+          ],
+          "hints": [
+            "The Crystal Flash is an emergency full-energy restore technique that most players never discover. It requires very specific conditions to activate.",
+            "Requirements: energy at 49 or below, ALL Energy Tanks empty, ALL Reserve Tanks empty, plus at least 10 Missiles, 10 Super Missiles, and 11 Power Bombs.",
+            "When at 49 energy or less with all tanks empty: [SPOILER: select Power Bombs, morph into a ball, lay a Power Bomb, then immediately hold L + R + Fire + Down. If done correctly, Samus absorbs the blast in a spectacular animation and your energy refills to maximum. It costs 10 Missiles, 10 Supers, and 10 Power Bombs. It's rarely needed in normal play, but it's a lifesaver in emergencies.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "3.1: Abilities — Crystal Flash",
+              "lines": "420-427",
+              "textFragment": "Crystal flash: This one is unknown because it's rarely used"
+            }
+          ]
+        },
+        {
+          "id": "beam-combos",
+          "title": "How to Use Beam Combos",
+          "order": 54,
+          "context": "Player has Power Bombs and wants to know about special beam attacks",
+          "tags": [
+            "technique",
+            "beam-combos",
+            "charge-beam",
+            "power-bombs",
+            "advanced"
+          ],
+          "hints": [
+            "Beam combos are powerful special attacks that use one Power Bomb as fuel. They require the Charge Beam plus exactly ONE other beam equipped.",
+            "To activate: equip the Charge Beam and only ONE other beam, highlight Power Bombs as your secondary, then charge your beam. It will automatically consume a Power Bomb to trigger the combo.",
+            "Each beam has a unique combo: [SPOILER: **Ice Spreader** — 4 ice bolts circle you (90 damage each, freezes on contact). **Wavebuster** — 4 wave bolts in complex patterns (150 each). **Spazer Shower** — 2 bolts spiral down then rain laser sparks (120 each). **Plasma Spiral** — 4 plasma bolts spiral outward then inward (450 each, strongest combo). You MUST have only one beam equipped besides Charge for these to work.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "3.5: Beam combos",
+              "lines": "768-830",
+              "textFragment": "to do a beam combo, you need to equip the charge beam and ONE"
+            }
+          ]
+        },
+        {
+          "id": "mockball-technique",
+          "title": "The Mockball Technique (Speed Ball)",
+          "order": 55,
+          "context": "Player wants to learn advanced movement techniques for speedrunning or sequence breaks",
+          "tags": [
+            "technique",
+            "mockball",
+            "speedball",
+            "sequence-break",
+            "advanced",
+            "speed-booster"
+          ],
+          "hints": [
+            "The Mockball (or Speed Ball) lets you maintain running speed while in morph ball form. It's an advanced technique used for sequence breaks.",
+            "While running (before reaching hyper speed), press Down to morph at the right moment — you'll roll forward at full run speed. This lets you pass through morph-ball-sized gaps without losing momentum.",
+            "To Mockball: [SPOILER: while running at full speed (but NOT at hyper/Speed Booster speed), press Down to morph into a ball. If timed correctly, you keep your running speed as a rolling ball. This lets you pass through shutters that normally require the Speed Booster, potentially getting items like the Ice Beam early. The timing is tight — you need to morph just as you start running, during the animation transition.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "3.1: Abilities — Mockball/Speedball",
+              "lines": "615-620",
+              "textFragment": "mockball/speedball. A MUST for traveling to unexplored areas"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
