@@ -4,6 +4,7 @@
   import Game from './views/Game.svelte';
   import Area from './views/Area.svelte';
   import Situation from './views/Situation.svelte';
+  import AddGuide from './views/AddGuide.svelte';
 
   let currentView = $state('home');
   let routeParams = $state({ game: null, area: null, situation: null });
@@ -16,9 +17,13 @@
     // Update URL query string
     const url = new URL(window.location);
     url.search = '';
-    if (params.game) url.searchParams.set('game', params.game);
-    if (params.area) url.searchParams.set('area', params.area);
-    if (params.situation) url.searchParams.set('situation', params.situation);
+    if (view === 'import') {
+      url.searchParams.set('view', 'import');
+    } else {
+      if (params.game) url.searchParams.set('game', params.game);
+      if (params.area) url.searchParams.set('area', params.area);
+      if (params.situation) url.searchParams.set('situation', params.situation);
+    }
     window.history.pushState({}, '', url);
 
     window.scrollTo(0, 0);
@@ -38,6 +43,10 @@
   // Parse URL on initial load
   $effect(() => {
     const params = new URLSearchParams(window.location.search);
+    if (params.get('view') === 'import') {
+      navigate('import', {});
+      return () => {};
+    }
     const game = params.get('game');
     const area = params.get('area');
     const situation = params.get('situation');
@@ -50,13 +59,17 @@
       navigate('game', { game });
     }
 
-    // Only run once on mount
     return () => {};
   });
 
   // Handle browser back/forward
   function handlePopState() {
     const params = new URLSearchParams(window.location.search);
+    if (params.get('view') === 'import') {
+      currentView = 'import';
+      routeParams = { game: null, area: null, situation: null };
+      return;
+    }
     const game = params.get('game');
     const area = params.get('area');
     const situation = params.get('situation');
@@ -113,6 +126,8 @@
 <main id="main-content" aria-label="Game hints">
   {#if currentView === 'home'}
     <Home onNavigate={navigate} />
+  {:else if currentView === 'import'}
+    <AddGuide onNavigate={navigate} />
   {:else if currentView === 'game'}
     <Game gameSlug={routeParams.game} onNavigate={navigate} />
   {:else if currentView === 'area'}

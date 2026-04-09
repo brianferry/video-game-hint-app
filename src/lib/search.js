@@ -1,5 +1,6 @@
 import Fuse from 'fuse.js';
 import { getAllGames } from './data-loader.js';
+import { USER_GAMES_CHANGED } from './user-games.js';
 
 /**
  * Flatten all games into searchable situation records.
@@ -42,6 +43,20 @@ const FUSE_OPTIONS = {
 
 let globalIndex = null;
 const gameIndexes = new Map();
+
+/**
+ * Clear cached Fuse indexes (call after user adds/removes a local guide).
+ */
+export function invalidateSearchCaches() {
+  globalIndex = null;
+  gameIndexes.clear();
+}
+
+if (typeof window !== 'undefined') {
+  window.addEventListener(USER_GAMES_CHANGED, () => {
+    invalidateSearchCaches();
+  });
+}
 
 /**
  * Build (or return cached) global search index across all games.

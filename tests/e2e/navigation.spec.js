@@ -4,7 +4,8 @@ test.describe('Home view', () => {
   test('loads with game list visible', async ({ page }) => {
     await page.goto('/');
     await expect(page.locator('[data-test="game-list"]')).toBeVisible();
-    await expect(page.locator('[data-test="game-list"] button')).toHaveCount(1);
+    const gameCards = page.locator('[data-test="game-list"] button');
+    await expect(gameCards).not.toHaveCount(0);
   });
 
   test('shows game titles and metadata', async ({ page }) => {
@@ -151,6 +152,70 @@ test.describe('Theme toggle', () => {
     const themeAfterSecondClick = await html.getAttribute('data-theme');
 
     expect(themeAfterClick).not.toBe(themeAfterSecondClick);
+  });
+});
+
+test.describe('Add guide', () => {
+  test('loads import page from URL', async ({ page }) => {
+    await page.goto('/?view=import');
+    await expect(page.locator('.view-title')).toContainText('Add your own guide');
+    await expect(page.locator('[data-test="add-guide-title"]')).toBeVisible();
+  });
+
+  test('navigates from home via link', async ({ page }) => {
+    await page.goto('/');
+    await page.locator('[data-test="add-guide-link"]').click();
+    await expect(page).toHaveURL(/view=import/);
+    await expect(page.locator('.view-title')).toContainText('Add your own guide');
+  });
+
+  test('contribute buttons enable after successful validation', async ({ page }) => {
+    const minimal = JSON.stringify({
+      slug: 'e2e-test-guide-slug',
+      title: 'E2E Test Guide',
+      year: 1999,
+      era: '1990s',
+      totalEstimatedSituations: 1,
+      areas: [
+        {
+          id: 'area-one',
+          name: 'Area One',
+          order: 1,
+          situations: [
+            {
+              id: 'sit-one',
+              title: 'First situation',
+              order: 1,
+              context: 'Hero, Area One, stuck on first puzzle',
+              tags: ['early-game', 'area-one', 'puzzle', 'navigation', 'test'],
+              hints: ['Look around carefully.'],
+            },
+          ],
+        },
+      ],
+    });
+
+    await page.goto('/?view=import');
+    await page.locator('[data-test="paste-json"]').fill(minimal);
+    await page.locator('[data-test="validate-json"]').click();
+
+    const copyBtn = page.locator('[data-test="copy-validated-json"]');
+    const issueBtn = page.locator('[data-test="open-contribute-issue"]');
+    await expect(copyBtn).toBeEnabled();
+    await expect(issueBtn).toBeEnabled();
+
+    await page.evaluate(() => {
+      window.__contributeOpened = [];
+      window.open = (url) => {
+        window.__contributeOpened.push(String(url));
+        return null;
+      };
+    });
+    await issueBtn.click();
+    const opened = await page.evaluate(() => window.__contributeOpened ?? []);
+    expect(opened.length).toBe(1);
+    expect(opened[0]).toMatch(/github\.com\/.*\/issues\/new/);
+    expect(decodeURIComponent(opened[0])).toContain('e2e-test-guide-slug');
   });
 });
 

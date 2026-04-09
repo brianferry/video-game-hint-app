@@ -1,43 +1,22 @@
-/**
- * Eagerly import all game JSON files at build time.
- * Vite bundles them into the single-file output.
- *
- * Keys look like: '../data/games/1990s/super-metroid.json'
- * Values are the parsed JSON (default export).
- */
-const gameModules = import.meta.glob('../data/games/**/*.json', {
-  eager: true,
-  import: 'default',
-});
-
-/** Map of slug → game data (built once on first access) */
-let gamesBySlug = null;
-
-function buildRegistry() {
-  if (gamesBySlug) return gamesBySlug;
-  gamesBySlug = new Map();
-  for (const [, data] of Object.entries(gameModules)) {
-    if (data && data.slug) {
-      gamesBySlug.set(data.slug, data);
-    }
-  }
-  return gamesBySlug;
-}
+import { getBundledGame, getAllBundledGames } from './bundled-registry.js';
+import { getUserGame, getAllUserGames } from './user-games.js';
 
 /**
- * Get a game by slug. Returns the full game object or null.
+ * Get a game by slug. Bundled games take precedence if both existed (should not happen).
+ * @param {string} slug
+ * @returns {object | null}
  */
 export function getGame(slug) {
-  return buildRegistry().get(slug) || null;
+  return getBundledGame(slug) || getUserGame(slug) || null;
 }
 
 /**
- * Get all games as an array, sorted by title.
+ * Get all games as an array, sorted by title (bundled + user guides on this device).
  */
 export function getAllGames() {
-  return Array.from(buildRegistry().values()).sort((a, b) =>
-    a.title.localeCompare(b.title)
-  );
+  const bundled = getAllBundledGames();
+  const user = getAllUserGames();
+  return [...bundled, ...user].sort((a, b) => a.title.localeCompare(b.title));
 }
 
 /**
@@ -61,6 +40,7 @@ export function getGameIndex() {
       totalEstimatedSituations: total,
       coverage,
       quality: game.quality || null,
+      isLocal: Boolean(game.isLocal),
     };
   });
 }

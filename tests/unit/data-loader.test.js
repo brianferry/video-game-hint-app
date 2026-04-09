@@ -40,5 +40,6 @@ describe('getGameIndex', () => {
     expect(sm.areaCount).toBeGreaterThan(0);
     expect(sm.situationCount).toBeGreaterThan(0);
     expect(sm.year).toBe(1994);
+    expect(sm.isLocal).toBe(false);
   });
 });

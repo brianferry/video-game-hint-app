@@ -431,6 +431,222 @@ main {
   font-family: var(--font-mono);
 }
 
+.game-card-local-badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.35rem;
+  font-size: 0.6rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  vertical-align: middle;
+  border: 1px solid var(--color-border);
+  background: var(--color-tag-bg);
+  color: var(--color-tag-text);
+}
+
+.home-add-guide {
+  margin: 0.35rem 0 0.85rem;
+  text-align: center;
+}
+
+.home-add-guide-btn {
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-link);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0.25rem 0.5rem;
+}
+
+.home-add-guide-btn:hover {
+  color: var(--color-link-hover);
+}
+
+.home-add-guide-btn:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   Add guide (import) page
+   ============================================================ */
+
+.add-guide-section {
+  margin-bottom: 1.75rem;
+  max-width: 48rem;
+  margin-inline: auto;
+  padding: 0 0.5rem;
+}
+
+.add-guide-step-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-accent);
+}
+
+.add-guide-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.add-guide-hint {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+.inline-code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  padding: 0.05rem 0.25rem;
+  background: var(--color-hint-bg);
+  border: 1px inset var(--color-border);
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  max-width: 100%;
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 0.45rem 0.5rem;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: var(--border-3d-inset);
+}
+
+.form-textarea {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.45;
+  resize: vertical;
+  min-height: 8rem;
+}
+
+.prompt-toolbar {
+  margin: 0.5rem 0;
+}
+
+.prompt-preview {
+  max-height: 14rem;
+  overflow: auto;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.65rem;
+  line-height: 1.4;
+  font-family: var(--font-mono);
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: var(--color-hint-bg);
+  border: 1px inset var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.add-guide-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.65rem;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-danger {
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+  border: var(--border-3d);
+  color: var(--color-text);
+}
+
+.btn-primary {
+  background: var(--color-btn-primary);
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--color-btn-primary-hover);
+}
+
+.btn-primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: var(--color-surface);
+}
+
+.btn-secondary:hover {
+  background: var(--color-surface-hover);
+}
+
+.btn-danger {
+  background: color-mix(in srgb, #800 30%, var(--color-surface));
+  border-color: #a44;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.btn-danger:hover {
+  background: color-mix(in srgb, #a00 35%, var(--color-surface));
+}
+
+.validation-msg {
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.75rem;
+  border: 1px solid var(--color-border);
+}
+
+.validation-msg strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.validation-msg ul {
+  margin-left: 1.1rem;
+}
+
+.validation-msg-error {
+  background: color-mix(in srgb, #c00 12%, var(--color-surface));
+  border-color: #a44;
+}
+
+.validation-msg-warn {
+  background: color-mix(in srgb, #ca0 12%, var(--color-surface));
+}
+
+.local-guides-list {
+  list-style: none;
+}
+
+.local-guides-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.local-guides-title {
+  font-weight: 700;
+  flex: 1 1 8rem;
+}
+
+.local-guides-slug {
+  font-size: 0.7rem;
+}
+
 /* ============================================================
    Coverage bar
    ============================================================ */

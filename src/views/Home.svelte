@@ -1,10 +1,23 @@
 <script>
-  import { getGameIndex, getAllGames } from '../lib/data-loader.js';
+  import { getGameIndex } from '../lib/data-loader.js';
   import { search } from '../lib/search.js';
+  import { USER_GAMES_CHANGED } from '../lib/user-games.js';
 
   let { onNavigate } = $props();
 
-  const gameIndex = getGameIndex();
+  let userGamesTick = $state(0);
+  $effect(() => {
+    function bump() {
+      userGamesTick += 1;
+    }
+    window.addEventListener(USER_GAMES_CHANGED, bump);
+    return () => window.removeEventListener(USER_GAMES_CHANGED, bump);
+  });
+
+  const gameIndex = $derived.by(() => {
+    userGamesTick;
+    return getGameIndex();
+  });
 
   let query = $state('');
   let searchResults = $state([]);
@@ -37,6 +50,12 @@
 
 <h1 class="view-title">Retro Game Hints</h1>
 <p class="view-subtitle">Progressive hints for classic games — no spoilers unless you ask.</p>
+
+<p class="home-add-guide">
+  <button type="button" class="home-add-guide-btn" onclick={() => onNavigate('import')} data-test="add-guide-link">
+    + Add your own guide
+  </button>
+</p>
 
 <div class="search-bar">
   <svg class="search-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -82,7 +101,12 @@
         onclick={() => goToGame(game.slug)}
         data-test="game-card-{game.slug}"
       >
-        <div class="game-card-title">{game.title}</div>
+        <div class="game-card-title">
+          {game.title}
+          {#if game.isLocal}
+            <span class="game-card-local-badge" title="Stored on this device only">Local</span>
+          {/if}
+        </div>
         <div class="game-card-meta">
           {game.year} · {game.areaCount} {game.areaCount === 1 ? 'area' : 'areas'} · {game.situationCount} {game.situationCount === 1 ? 'hint' : 'hints'}
         </div>

@@ -4,6 +4,10 @@
   "version": "1.0.0",
   "description": "A DIY progressive hint system for classic video games",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brianferry/video-game-hint-app"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",

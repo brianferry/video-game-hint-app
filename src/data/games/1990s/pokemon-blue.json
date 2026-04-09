@@ -1,0 +1,1036 @@
+{
+  "slug": "pokemon-blue",
+  "title": "Pokémon Blue",
+  "year": 1996,
+  "era": "1990s",
+  "totalEstimatedSituations": 35,
+  "quality": null,
+  "importedAt": "2026-04-09T00:00:00Z",
+  "importSource": {
+    "file": "907714-pokemon-blue-version-faqs-64175.txt",
+    "url": "https://gamefaqs.gamespot.com/gameboy/907714-pokemon-blue-version/faqs/64175"
+  },
+  "sources": [
+    {
+      "id": "src-1",
+      "name": "Zerokid's Pokemon Red/Blue/Yellow FAQ/Walkthrough v1.45",
+      "url": "https://gamefaqs.gamespot.com/gameboy/907714-pokemon-blue-version/faqs/64175",
+      "author": "Zerokid",
+      "platform": "GameFAQs"
+    }
+  ],
+  "areas": [
+    {
+      "id": "pallet-to-pewter",
+      "name": "Pallet Town → Pewter City (First Badge)",
+      "order": 1,
+      "situations": [
+        {
+          "id": "choose-starter-and-rival",
+          "title": "Choosing a starter and your rival battle (Oak's Lab)",
+          "order": 1,
+          "context": "Trainer, Pallet Town, just got Poké Balls and need to pick a good starter and beat the first rival fight",
+          "tags": [
+            "early-game",
+            "pallet-town",
+            "oaks-lab",
+            "rival-battle",
+            "starter-choice",
+            "tutorial",
+            "battle"
+          ],
+          "hints": [
+            "Any starter can finish the game, but each makes the early gyms easier or harder.",
+            "If you want an easier first gym, choose a starter that has an advantage against the first leader's type. Consider your plan for the next few gyms too.",
+            "If you're optimizing early: [SPOILER: Bulbasaur makes Brock and Misty much easier; Squirtle helps Brock and later Blaine; Charmander is harder early (Brock/Misty) but strong later. For the first rival battle, use your starter's strongest move and heal if needed — it's meant to be winnable.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[01] Pallet Town",
+              "lines": "308-643"
+            }
+          ]
+        },
+        {
+          "id": "oaks-parcel-and-pokedex",
+          "title": "Delivering Oak's Parcel and getting the Pokédex",
+          "order": 2,
+          "context": "Trainer, Viridian City/Pallet Town, asked to deliver a parcel and now need to unlock the Pokédex and Poké Balls",
+          "tags": [
+            "early-game",
+            "viridian-city",
+            "pallet-town",
+            "main-quest",
+            "oak",
+            "pokedex",
+            "tutorial"
+          ],
+          "hints": [
+            "This early quest is just a back-and-forth that unlocks the real game features.",
+            "Go to the mart in the first city to receive the parcel, then return to the professor to trigger the next step.",
+            "Do the delivery loop: [SPOILER: Pick up Oak's Parcel at the Viridian City Poké Mart, bring it back to Prof. Oak in Pallet Town, then watch the cutscene to receive the Pokédex (and unlock Poké Balls at the mart).]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[03] Viridian City",
+              "lines": "680-882"
+            }
+          ]
+        },
+        {
+          "id": "getting-through-viridian-forest",
+          "title": "Getting through Viridian Forest without getting lost",
+          "order": 3,
+          "context": "Trainer, Viridian Forest, trying to reach Pewter City but keep looping or taking too much damage",
+          "tags": [
+            "early-game",
+            "viridian-forest",
+            "navigation",
+            "trainer-battles",
+            "status-ailments",
+            "item-hunt"
+          ],
+          "hints": [
+            "This forest is a short maze with several trainers. You can make it easier by healing and grabbing key items along the way.",
+            "Follow the main path and use the shop in Viridian City if you're low on healing. Avoid unnecessary grass encounters if you're underleveled.",
+            "To clear the forest: [SPOILER: Enter from Route 2, follow the path north and east to fight the required bug catchers, grab Antidote/Paralyze Heal/Potion pickups, then exit to Route 2 leading to Pewter City. Use Antidotes if poisoned — it adds up fast early.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[05] Viridian Forest",
+              "lines": "946-1005"
+            }
+          ]
+        },
+        {
+          "id": "beating-brock",
+          "title": "Beating Brock (Pewter City Gym)",
+          "order": 4,
+          "context": "Trainer, Pewter City Gym, stuck on Brock's Rock-type Pokémon",
+          "tags": [
+            "early-game",
+            "pewter-city",
+            "gym",
+            "boss",
+            "brock",
+            "type-matchups",
+            "boss-strategy"
+          ],
+          "hints": [
+            "Brock is designed to teach type matchups. If you're struggling, adjust your team or levels rather than brute-forcing it.",
+            "Moves that exploit Rock/Ground weaknesses help most. Status and lowering accuracy can also make the fight safer.",
+            "Practical options: [SPOILER: Use Bulbasaur's Grass moves (or any Grass/Water attack), or catch **Nidoran** and train for **Double Kick** (Nidoran line). If using Charmander, level up to learn stronger moves and consider Sand-Attack/sleep/poison to reduce incoming damage.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[07] Pewter City",
+              "lines": "1319-1473"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mt-moon-to-cerulean",
+      "name": "Mt. Moon → Cerulean City (Second Badge)",
+      "order": 2,
+      "situations": [
+        {
+          "id": "route-3-trainers-grind",
+          "title": "Getting through Route 3 trainers without being underleveled",
+          "order": 5,
+          "context": "Trainer, Route 3, a long line of trainers is draining resources before Mt. Moon",
+          "tags": [
+            "early-game",
+            "route-3",
+            "trainer-battles",
+            "resource-management",
+            "grinding",
+            "pre-mt-moon"
+          ],
+          "hints": [
+            "Route 3 is a difficulty bump because it's trainer-dense. Treat it as a controlled leveling segment.",
+            "Rotate your party to spread experience and return to the Pokémon Center if you're running low on HP/PP.",
+            "Efficient approach: [SPOILER: Fight trainers in chunks, healing in Pewter City as needed. Prioritize getting a few party members to consistent levels rather than overleveling one. Picking up Potions and using status heals prevents snowballing losses.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[08] Route 3                   Encounter Rate: 20",
+              "lines": "1474-1677"
+            }
+          ]
+        },
+        {
+          "id": "mt-moon-navigation",
+          "title": "Navigating Mt. Moon and finding the right exits",
+          "order": 6,
+          "context": "Trainer, Mt. Moon, keep getting lost and want to reach Cerulean City efficiently",
+          "tags": [
+            "early-game",
+            "mt-moon",
+            "navigation",
+            "dungeon",
+            "rocket",
+            "item-hunt",
+            "fossil"
+          ],
+          "hints": [
+            "This dungeon has two main paths with optional items. The key is to stay oriented around ladders and the exit direction.",
+            "If you're short on supplies, focus on the main path and skip dead ends until later.",
+            "General route: [SPOILER: Work through the first floor to reach ladders down, continue to the Rocket encounters, and aim for the fossil choice near the end. After picking **Helix Fossil** or **Dome Fossil**, take the exit ladder that leads you out to Route 4 toward Cerulean.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[09] Mt. Moon                  Encounter Rate: 10",
+              "lines": "1678-2123"
+            }
+          ]
+        },
+        {
+          "id": "beating-misty",
+          "title": "Beating Misty (Cerulean City Gym)",
+          "order": 7,
+          "context": "Trainer, Cerulean City Gym, Misty's Water-types are outspeeding and sweeping the team",
+          "tags": [
+            "early-game",
+            "cerulean-city",
+            "gym",
+            "boss",
+            "misty",
+            "type-matchups",
+            "boss-strategy"
+          ],
+          "hints": [
+            "Misty is fast and hits hard for this point. The simplest answer is using type advantage or status to slow the fight down.",
+            "Grass and Electric moves are especially effective. If you don't have them, consider using sleep/paralysis and defensive play.",
+            "Reliable plan: [SPOILER: Use a Grass Pokémon (Bulbasaur/Oddish/Bellsprout) or teach an Electric attacker (like Pikachu) to pressure Starmie. Paralyze it to reduce speed, heal between hits, and avoid letting one weak Pokémon take repeated Water attacks.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[11] Cerulean City",
+              "lines": "2189-2352"
+            }
+          ]
+        },
+        {
+          "id": "nugget-bridge-and-bill",
+          "title": "Nugget Bridge: how to clear the gauntlet and meet Bill",
+          "order": 8,
+          "context": "Trainer, north of Cerulean City, a sequence of trainers blocks progress to Bill's house",
+          "tags": [
+            "early-game",
+            "route-24",
+            "route-25",
+            "trainer-gauntlet",
+            "bill",
+            "resource-management"
+          ],
+          "hints": [
+            "This is another multi-trainer stretch. It’s easiest if you plan a return to the Pokémon Center partway through.",
+            "Lead with a Pokémon that can consistently win without heavy PP usage, and swap to train others near the end.",
+            "Clear it safely: [SPOILER: Battle up the bridge, heal if needed by returning to Cerulean, then continue east on Route 25 to Bill’s house. Help Bill to get the S.S. Ticket, which is the key to progressing to Vermilion.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[12] Route 24                  Encounter Rate: 25",
+              "lines": "2353-2684"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vermilion-and-ss-anne",
+      "name": "Vermilion City + S.S. Anne (HM Cut)",
+      "order": 3,
+      "situations": [
+        {
+          "id": "reach-vermilion",
+          "title": "Reaching Vermilion City from Cerulean",
+          "order": 9,
+          "context": "Trainer, between Cerulean and Vermilion, trying to reach the port city and can't get past the gate guards",
+          "tags": [
+            "early-game",
+            "route-5",
+            "route-6",
+            "underground-path",
+            "vermilion-city",
+            "navigation"
+          ],
+          "hints": [
+            "To reach the port city, you need to take the south path from Cerulean through the connected routes.",
+            "There’s an Underground Path that bypasses a blocked route segment.",
+            "Route path: [SPOILER: Go south from Cerulean to Route 5, take the Underground Path to Route 6, continue south to Vermilion City. If a gate is blocked, you’re likely at the wrong entrance — use the Underground Path.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[16] Underground Path (5-6)",
+              "lines": "3197-3213"
+            }
+          ]
+        },
+        {
+          "id": "get-hm01-cut",
+          "title": "Getting HM01 Cut on the S.S. Anne",
+          "order": 10,
+          "context": "Trainer, S.S. Anne, need Cut to progress but can't find where to get it",
+          "tags": [
+            "early-game",
+            "ss-anne",
+            "vermilion-city",
+            "key-item",
+            "hm",
+            "requires-ss-ticket",
+            "cut"
+          ],
+          "hints": [
+            "HM Cut is a story-gated reward on the ship. You need to explore deeper than the passenger rooms.",
+            "Look for a captain’s quarters and help with a short interaction to receive the HM.",
+            "Where it is: [SPOILER: Use the S.S. Ticket to board, fight your way through trainers, then find the Captain’s room. After helping the Captain, you receive **HM01 Cut**. Teach it to a Pokémon that can learn it to open the blocked path.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[21] S.S. Anne",
+              "lines": "3759-4494"
+            }
+          ]
+        },
+        {
+          "id": "beating-lt-surge",
+          "title": "Beating Lt. Surge (Vermilion City Gym)",
+          "order": 11,
+          "context": "Trainer, Vermilion City Gym, stuck on the trash can switch puzzle or Surge's Electric-types",
+          "tags": [
+            "early-game",
+            "vermilion-city",
+            "gym",
+            "boss",
+            "lt-surge",
+            "puzzle",
+            "electric"
+          ],
+          "hints": [
+            "This gym has a two-switch puzzle. The second switch is always adjacent to the first, so solve it systematically.",
+            "For the battle itself, Ground types and strong physical attackers help a lot against Electric Pokémon.",
+            "Puzzle + fight: [SPOILER: Search trash cans until you find the first switch. Immediately check adjacent cans for the second. If it resets, repeat. In battle, a Ground type (like Diglett/Dugtrio from Diglett’s Cave) can trivialize Electric attacks; otherwise use defense boosts and healing.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[18] Vermilion City",
+              "lines": "3378-3460"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rock-tunnel-and-lavender",
+      "name": "Rock Tunnel + Lavender Town (Flash + Ghost Tower)",
+      "order": 4,
+      "situations": [
+        {
+          "id": "get-hm05-flash",
+          "title": "Getting HM05 Flash so Rock Tunnel isn’t impossible",
+          "order": 12,
+          "context": "Trainer, before Rock Tunnel, entering a dark cave and can't see where to go",
+          "tags": [
+            "mid-game",
+            "route-2",
+            "digletts-cave",
+            "key-item",
+            "hm",
+            "flash",
+            "navigation"
+          ],
+          "hints": [
+            "Rock Tunnel is much easier with Flash, but you have to earn it by meeting a requirement.",
+            "You need a certain number of badges to receive Flash from a helper NPC in a side area.",
+            "How to get it: [SPOILER: After progressing and earning enough badges, go to the aide in the Route 2 gate building (accessed via Diglett’s Cave) to receive **HM05 Flash**. Teach it to a Pokémon, then use it inside Rock Tunnel.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[19] Diglett's Cave            Encounter Rate: 20",
+              "lines": "3461-3497"
+            }
+          ]
+        },
+        {
+          "id": "navigate-rock-tunnel",
+          "title": "Navigating Rock Tunnel without looping forever",
+          "order": 13,
+          "context": "Trainer, Rock Tunnel, stuck in the cave and keep looping between ladders",
+          "tags": [
+            "mid-game",
+            "rock-tunnel",
+            "navigation",
+            "dungeon",
+            "requires-flash",
+            "trainer-battles"
+          ],
+          "hints": [
+            "This cave is mainly about staying oriented. If you keep returning to the same ladder, you likely took a wrong branch after dropping levels.",
+            "Use Flash if you have it, and prioritize reaching the exit rather than clearing every trainer on your first pass.",
+            "Exit-focused route: [SPOILER: Use **Flash** immediately, then follow the guide’s ladder sequence to descend and climb in the correct order. Aim to reach the southern exit toward Lavender Town; if you return to the entrance floor, backtrack to the last ladder and take the alternate corridor.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[24] Rock Tunnel               Encounter Rate: 15",
+              "lines": "4815-5229"
+            }
+          ]
+        },
+        {
+          "id": "ghosts-in-pokemon-tower",
+          "title": "Pokémon Tower: dealing with ghosts you can’t identify",
+          "order": 14,
+          "context": "Trainer, Lavender Town Pokémon Tower, ghosts are blocking progress and attacks aren’t working well",
+          "tags": [
+            "mid-game",
+            "lavender-town",
+            "pokemon-tower",
+            "puzzle",
+            "requires-silph-scope",
+            "story",
+            "navigation"
+          ],
+          "hints": [
+            "If the tower’s ghosts are “unidentifiable,” you’re missing a key item from another city.",
+            "You need the **Silph Scope** from a Rocket-related dungeon to identify and battle the ghosts normally.",
+            "What to do: [SPOILER: Leave the tower, go to Celadon City, clear the Rocket Hideout, and obtain the **Silph Scope**. Return to Pokémon Tower to identify ghosts and progress to the story event near the top.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[31] Pokemon Tower",
+              "lines": "6543-7081"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "celadon-and-rocket-hideout",
+      "name": "Celadon City + Rocket Hideout (Silph Scope)",
+      "order": 5,
+      "situations": [
+        {
+          "id": "enter-saffron-guards-thirsty",
+          "title": "Saffron City guards won’t let you pass (they’re thirsty)",
+          "order": 15,
+          "context": "Trainer, gates to Saffron City, guards keep blocking the entrances",
+          "tags": [
+            "mid-game",
+            "saffron-city",
+            "celadon-city",
+            "npc-interaction",
+            "locked-gate",
+            "key-item",
+            "main-quest"
+          ],
+          "hints": [
+            "This is a simple item-gate. The guards want a specific drink.",
+            "The drink is available in the big city with a department store and vending machines.",
+            "Unlock it: [SPOILER: Go to Celadon City’s department store, buy a drink from the vending machines on the rooftop/upper floors, then give it to the guard at a Saffron gate to enter.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[29] Celadon City",
+              "lines": "5572-5924"
+            }
+          ]
+        },
+        {
+          "id": "beating-erika",
+          "title": "Beating Erika (Celadon City Gym)",
+          "order": 16,
+          "context": "Trainer, Celadon Gym, Erika’s Grass-types are putting the team to sleep or stalling",
+          "tags": [
+            "mid-game",
+            "celadon-city",
+            "gym",
+            "boss",
+            "erika",
+            "grass",
+            "status"
+          ],
+          "hints": [
+            "Erika’s team rewards bringing the right move types and status cures.",
+            "Fire/Flying/Ice attacks help, and having Awakening/Paralyze Heal prevents getting stalled.",
+            "Simple win: [SPOILER: Use Fire/Flying attackers or strong neutral damage, cure sleep immediately, and focus down the most annoying status-spreader first. If you’re underleveled, clear nearby routes for experience before retrying.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[29] Celadon City",
+              "lines": "5572-5924"
+            }
+          ]
+        },
+        {
+          "id": "rocket-hideout-navigation",
+          "title": "Rocket Hideout: finding the key item (Silph Scope) and the boss",
+          "order": 17,
+          "context": "Trainer, Rocket Hideout beneath Celadon, stuck on warp tiles and can’t find the objective",
+          "tags": [
+            "mid-game",
+            "rocket-hideout",
+            "celadon-city",
+            "dungeon",
+            "puzzle",
+            "warp-tiles",
+            "looking-for-silph-scope"
+          ],
+          "hints": [
+            "The hideout is a warp-tile maze. The trick is to treat the tiles like directed doors: learn which ones advance you and which reset you.",
+            "Your goal is to reach the deeper floors, defeat the Rocket leadership, and claim the key item reward.",
+            "Clear it: [SPOILER: Work through the warp tile sequences to reach the Rocket boss (Giovanni) in the hideout. After beating him, collect the **Silph Scope**. Then return to Lavender’s Pokémon Tower to progress the ghost-related story.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[30] Rocket Hideout",
+              "lines": "5925-6542"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fuchsia-and-safari",
+      "name": "Fuchsia City + Safari Zone (Surf + Strength)",
+      "order": 6,
+      "situations": [
+        {
+          "id": "reach-fuchsia-city",
+          "title": "Reaching Fuchsia City (routes and gates feel confusing)",
+          "order": 18,
+          "context": "Trainer, west/south routes from Celadon, trying to reach Fuchsia City and not sure which route is intended",
+          "tags": [
+            "mid-game",
+            "fuchsia-city",
+            "route-16",
+            "route-17",
+            "route-18",
+            "cycling-road",
+            "navigation"
+          ],
+          "hints": [
+            "There are multiple ways to approach Fuchsia, but one common path uses the long south route from the west side of the map.",
+            "If a gate blocks you, you may be missing a bike-related requirement.",
+            "Standard route: [SPOILER: From Celadon, head west to Route 16 and proceed down Cycling Road (Routes 17/18) to reach Fuchsia City. If you can’t enter Cycling Road, get the Bicycle from Cerulean using the Bike Voucher.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[33] Route 17                  Encounter Rate: 25",
+              "lines": "7269-7527"
+            }
+          ]
+        },
+        {
+          "id": "safari-zone-surf",
+          "title": "Safari Zone: finding HM Surf before time runs out",
+          "order": 19,
+          "context": "Trainer, Safari Zone, searching for Surf but keep running out of steps/time",
+          "tags": [
+            "mid-game",
+            "safari-zone",
+            "fuchsia-city",
+            "key-item",
+            "hm",
+            "surf",
+            "navigation"
+          ],
+          "hints": [
+            "The Safari Zone is an efficiency puzzle. You need a route plan rather than exploring randomly.",
+            "Surf is a reward at the far end of the zone. Prioritize reaching that area first; you can come back for items later.",
+            "Route plan: [SPOILER: From the entrance, follow the guide’s shortest path through the zone areas to reach the Secret House and receive **HM03 Surf**. After you have Surf, you can ignore the time pressure and return later if needed.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[36] Safari Zone               Encounter Rate: 30",
+              "lines": "7716-8003"
+            }
+          ]
+        },
+        {
+          "id": "get-hm04-strength",
+          "title": "Getting HM Strength (the Warden and the Gold Teeth)",
+          "order": 20,
+          "context": "Trainer, Fuchsia City, know Strength exists but don’t know how to obtain it",
+          "tags": [
+            "mid-game",
+            "fuchsia-city",
+            "safari-zone",
+            "key-item",
+            "hm",
+            "strength",
+            "npc-interaction"
+          ],
+          "hints": [
+            "Strength is unlocked by completing a small side objective tied to the Safari Zone.",
+            "You need to find an item in the Safari Zone and return it to the right NPC in Fuchsia.",
+            "Steps: [SPOILER: Find the **Gold Teeth** in the Safari Zone, then give them to the Warden in Fuchsia City. He rewards you with **HM04 Strength**. Teach it to a compatible Pokémon to move boulders.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[35] Fuchsia City",
+              "lines": "7620-7715"
+            }
+          ]
+        },
+        {
+          "id": "beating-koga",
+          "title": "Beating Koga (Fuchsia City Gym)",
+          "order": 21,
+          "context": "Trainer, Fuchsia Gym, Koga’s poison/status tactics are overwhelming",
+          "tags": [
+            "mid-game",
+            "fuchsia-city",
+            "gym",
+            "boss",
+            "koga",
+            "poison",
+            "status"
+          ],
+          "hints": [
+            "This gym is a status-management fight. Bring Antidotes/Full Heals and plan to remove poison quickly.",
+            "Psychic and Ground attacks are strong options against Poison types in this era.",
+            "Battle plan: [SPOILER: Stock up on Antidotes/Full Heals, use Psychic-type attacks if available, and focus down the Pokémon most likely to use evasion/status moves first. Healing items are expected here — don’t be afraid to use them.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[35] Fuchsia City",
+              "lines": "7620-7715"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "saffron-and-silph",
+      "name": "Saffron City + Silph Co. (Team Rocket HQ)",
+      "order": 7,
+      "situations": [
+        {
+          "id": "get-poke-flute",
+          "title": "Getting the Poké Flute (waking Snorlax)",
+          "order": 22,
+          "context": "Trainer, overworld routes, Snorlax is blocking paths and you can’t wake it up",
+          "tags": [
+            "mid-game",
+            "pokemon-tower",
+            "key-item",
+            "poke-flute",
+            "snorlax",
+            "blocked-path",
+            "main-quest"
+          ],
+          "hints": [
+            "Snorlax can only be moved with a specific key item earned from a story segment.",
+            "That key item is obtained by resolving the main event at the top of Lavender’s tower.",
+            "What to do: [SPOILER: Use the **Silph Scope** to clear Pokémon Tower’s ghost blockage, progress to the top to resolve the story event, then receive the **Poké Flute**. Use it to wake Snorlax on Routes 12/16.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[31] Pokemon Tower",
+              "lines": "6543-7081"
+            }
+          ]
+        },
+        {
+          "id": "silph-co-navigation",
+          "title": "Silph Co.: navigating warp tiles and finding the key floors",
+          "order": 23,
+          "context": "Trainer, Silph Co., warp tiles keep sending you in circles and you can’t find the boss",
+          "tags": [
+            "mid-game",
+            "silph-co",
+            "saffron-city",
+            "dungeon",
+            "puzzle",
+            "warp-tiles",
+            "team-rocket"
+          ],
+          "hints": [
+            "Silph Co. is a structured warp-tile puzzle. The right approach is mapping which tile pairs connect the floors you need.",
+            "Your objective is to reach the Rocket leadership and rescue the company to earn a key battle reward.",
+            "High-level route: [SPOILER: Use the guide’s warp-tile path to reach the floor with the rival fight, then continue to Giovanni. After defeating him, you’ll receive a major reward and Silph Co. becomes safe.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[43] Silph Co.",
+              "lines": "9455-10397"
+            }
+          ]
+        },
+        {
+          "id": "beating-sabrina",
+          "title": "Beating Sabrina (Saffron City Gym)",
+          "order": 24,
+          "context": "Trainer, Saffron Gym, Sabrina’s Psychic-types are sweeping the team",
+          "tags": [
+            "mid-game",
+            "saffron-city",
+            "gym",
+            "boss",
+            "sabrina",
+            "psychic",
+            "boss-strategy"
+          ],
+          "hints": [
+            "In Gen 1, Psychic is extremely strong. You’ll usually win by hitting hard with the few types that can pressure it, or by outleveling slightly.",
+            "If you don’t have ideal counters, use status moves and reliable physical damage to avoid getting one-shot.",
+            "Practical solutions: [SPOILER: Use strong physical attackers (like Normal types) and consider moves like Thunder Wave/sleep to control turns. Ghost isn’t a reliable counter in Gen 1. Bring healing and don’t let one Pokémon get picked off without trading damage.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[42] Saffron City",
+              "lines": "9316-9454"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cinnabar-and-mansion",
+      "name": "Cinnabar Island + Pokémon Mansion (Seventh Badge)",
+      "order": 8,
+      "situations": [
+        {
+          "id": "reach-cinnabar-by-surf",
+          "title": "Reaching Cinnabar Island by Surf",
+          "order": 25,
+          "context": "Trainer, coastal routes, got Surf but don’t know how to reach Cinnabar Island",
+          "tags": [
+            "late-game",
+            "surf",
+            "sea-route-19",
+            "sea-route-20",
+            "cinnabar-island",
+            "navigation"
+          ],
+          "hints": [
+            "Cinnabar is accessed by surfing along the southern coast from the right coastal town.",
+            "If you can’t start the surfing route, you may be missing Surf or be at the wrong starting beach.",
+            "Coastal route: [SPOILER: From Fuchsia City, Surf south to Sea Route 19, then follow the coast west along Sea Route 20 to reach Cinnabar Island.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[44] Sea Route 19       Surfing Encounter Rate: 5",
+              "lines": "10398-10587"
+            }
+          ]
+        },
+        {
+          "id": "pokemon-mansion-secret-key",
+          "title": "Pokémon Mansion: finding the Secret Key with statue switches",
+          "order": 26,
+          "context": "Trainer, Pokémon Mansion, doors keep changing and you can’t find the key for the gym",
+          "tags": [
+            "late-game",
+            "pokemon-mansion",
+            "dungeon",
+            "puzzle",
+            "switches",
+            "secret-key",
+            "cinnabar-island"
+          ],
+          "hints": [
+            "This dungeon is built around toggling switches that change which doors are open.",
+            "When you hit a dead end, you usually need to press a switch again and loop back with a different door configuration.",
+            "How to solve: [SPOILER: Use the statue switches to open/close door sets and navigate floor-to-floor. The **Secret Key** is near the deeper parts of the mansion. Once you pick it up, you can enter Cinnabar Gym.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[49] Pokemon Mansion           Encounter Rate: 10",
+              "lines": "11275-12070"
+            }
+          ]
+        },
+        {
+          "id": "beating-blaine",
+          "title": "Beating Blaine (Cinnabar Island Gym quiz + fight)",
+          "order": 27,
+          "context": "Trainer, Cinnabar Gym, want to get through the quiz rooms and beat Blaine",
+          "tags": [
+            "late-game",
+            "cinnabar-island",
+            "gym",
+            "boss",
+            "blaine",
+            "fire",
+            "quiz"
+          ],
+          "hints": [
+            "You can either answer quiz questions to skip trainers, or fight trainers directly. Either way, the gym is straightforward once you reach Blaine.",
+            "Water/Ground/Rock attacks work well against Fire types; healing between fights is normal here.",
+            "Quick route: [SPOILER: Answer the quiz questions to open doors and minimize battles, then fight Blaine. Use Water-type moves (or strong neutral damage) to handle his Fire Pokémon.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[48] Cinnabar Island",
+              "lines": "11171-11274"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "viridian-and-victory-road",
+      "name": "Viridian Gym → Victory Road (Final Badge + Road to Elite Four)",
+      "order": 9,
+      "situations": [
+        {
+          "id": "beating-giovanni-viridian-gym",
+          "title": "Beating Giovanni (Viridian City Gym)",
+          "order": 28,
+          "context": "Trainer, Viridian Gym, reached the final gym but the team struggles against Ground-type attacks",
+          "tags": [
+            "late-game",
+            "viridian-city",
+            "gym",
+            "boss",
+            "giovanni",
+            "ground-types",
+            "boss-strategy"
+          ],
+          "hints": [
+            "The final gym leans heavily on Ground types. The main answer is bringing the right move types and avoiding Electric dependency.",
+            "Water/Grass/Ice coverage and strong special attacks work well here.",
+            "Winning plan: [SPOILER: Use Water/Grass attacks to handle Ground types, and keep fragile Electric Pokémon away from Earthquake-heavy matchups. If you’re close but not quite winning, a small level bump from nearby routes makes a big difference.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "EarthBadge / Giovanni (Viridian Gym)",
+              "lines": "11810-11875"
+            }
+          ]
+        },
+        {
+          "id": "route-23-badge-checks",
+          "title": "Route 23 gates: passing badge checks to reach Victory Road",
+          "order": 29,
+          "context": "Trainer, Route 23, gates are blocking progress toward the Pokémon League",
+          "tags": [
+            "late-game",
+            "route-23",
+            "navigation",
+            "badge-check",
+            "main-quest",
+            "pokemon-league"
+          ],
+          "hints": [
+            "These gates are simple progression checks: each one requires a certain badge.",
+            "If you’re blocked, you’re missing a gym badge somewhere earlier in the story.",
+            "What to do: [SPOILER: Make sure you’ve defeated all eight gym leaders. Then proceed north on Route 23; each gate guard will let you through when you have the required badge, eventually leading to Victory Road.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[50] Route 23                  Encounter Rate: 10",
+              "lines": "12071-12129"
+            }
+          ]
+        },
+        {
+          "id": "victory-road-boulder-puzzles",
+          "title": "Victory Road: solving boulder puzzles and reaching the exit",
+          "order": 30,
+          "context": "Trainer, Victory Road, boulders and ladders are confusing and progress keeps stalling",
+          "tags": [
+            "late-game",
+            "victory-road",
+            "navigation",
+            "dungeon",
+            "boulder-puzzle",
+            "requires-strength"
+          ],
+          "hints": [
+            "Victory Road is a multi-floor dungeon with Strength boulder puzzles. If you ignore boulders entirely, you’ll often block yourself.",
+            "Use Strength deliberately and think about which floors the boulders will drop to.",
+            "Solve it: [SPOILER: Use **Strength** to push boulders into holes so they appear on lower floors and act as switches/bridges. Follow the intended ladder sequence to progress upward and out toward Indigo Plateau.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[51] Victory Road       Encounter Rate 1F, 3F: 15",
+              "lines": "12130-12411"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "indigo-plateau",
+      "name": "Indigo Plateau (Elite Four + Champion)",
+      "order": 10,
+      "situations": [
+        {
+          "id": "elite-four-prep",
+          "title": "Preparing for the Elite Four (items, levels, and team gaps)",
+          "order": 31,
+          "context": "Trainer, Indigo Plateau, about to challenge the Elite Four and worried about running out of healing or coverage",
+          "tags": [
+            "endgame",
+            "indigo-plateau",
+            "elite-four",
+            "preparation",
+            "resource-management",
+            "team-building"
+          ],
+          "hints": [
+            "The Elite Four is a long sequence with no free healing between battles. Preparation matters more than perfect play.",
+            "Bring enough healing and status cures, and make sure you have answers for multiple types rather than relying on one sweeper.",
+            "Checklist: [SPOILER: Stock up on Full Restores/Hyper Potions/Revives and status heals. Make sure your team is roughly in the high 40s to 50s (varies by roster). Add coverage for Ice/Water/Electric/Psychic-type threats, and bring a plan for the Champion’s most dangerous Pokémon.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[52] Indigo Plateau",
+              "lines": "12412-13081"
+            }
+          ]
+        },
+        {
+          "id": "beating-elite-four",
+          "title": "Beating the Elite Four in one run",
+          "order": 32,
+          "context": "Trainer, Indigo Plateau, repeatedly losing late in the Elite Four run and want a safer approach",
+          "tags": [
+            "endgame",
+            "indigo-plateau",
+            "elite-four",
+            "boss-rush",
+            "resource-management",
+            "healing"
+          ],
+          "hints": [
+            "If you keep losing late, the fix is usually resource management: heal earlier and avoid unnecessary risks in the early fights.",
+            "Use reliable moves over flashy ones and switch proactively to avoid losing a key team member.",
+            "Safer approach: [SPOILER: Treat each fight as a resource budget. Don’t let a Pokémon get KO’d just to save a potion. Heal before you’re in KO range, cure status immediately when it threatens a sweep, and switch to preserve your best answers for later fights.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[52] Indigo Plateau",
+              "lines": "12412-13081"
+            }
+          ]
+        },
+        {
+          "id": "beating-champion",
+          "title": "Beating the Champion (final rival fight)",
+          "order": 33,
+          "context": "Trainer, Pokémon League Champion room, the rival’s mixed team is covering your weaknesses",
+          "tags": [
+            "endgame",
+            "indigo-plateau",
+            "champion",
+            "rival-battle",
+            "boss",
+            "boss-strategy",
+            "type-coverage"
+          ],
+          "hints": [
+            "The Champion fight tests whether your team has broad coverage. If one Pokémon is walling you, you may need a different move type rather than more levels.",
+            "Identify the rival’s biggest threat to your team and plan your switch-ins so you aren’t forced to sacrifice something important.",
+            "Winning plan: [SPOILER: Lead with a matchup that can safely get momentum, then rotate to your best counters for each of the rival’s types. Use items to keep your counters alive. If you’re consistently losing to one specific Pokémon, teach a coverage move or swap a party member before attempting again.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[52] Indigo Plateau",
+              "lines": "12412-13081"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cerulean-cave-postgame",
+      "name": "Cerulean Cave (Post-game)",
+      "order": 11,
+      "situations": [
+        {
+          "id": "unlock-cerulean-cave",
+          "title": "Unlocking Cerulean Cave after becoming Champion",
+          "order": 34,
+          "context": "Trainer, Cerulean City, heard about Cerulean Cave but don’t know how to access it",
+          "tags": [
+            "post-game",
+            "cerulean-city",
+            "cerulean-cave",
+            "unlock",
+            "main-quest",
+            "mewtwo"
+          ],
+          "hints": [
+            "Cerulean Cave is a post-game area that only opens after you beat the main story.",
+            "If it’s still blocked, you likely haven’t finished the Elite Four + Champion sequence yet.",
+            "Access: [SPOILER: Defeat the Elite Four and the Champion, then return to Cerulean City and head to the cave entrance. The guard/NPC blocking it earlier will be gone, letting you enter.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[53] Cerulean Cave          Encounter Rate 1F: 10",
+              "lines": "13082-13330"
+            }
+          ]
+        },
+        {
+          "id": "find-and-catch-mewtwo",
+          "title": "Finding and catching Mewtwo",
+          "order": 35,
+          "context": "Trainer, Cerulean Cave, reached the deep area and want to catch the legendary Pokémon without it fainting",
+          "tags": [
+            "post-game",
+            "cerulean-cave",
+            "mewtwo",
+            "legendary",
+            "capture",
+            "boss-strategy",
+            "status-ailments"
+          ],
+          "hints": [
+            "This is a capture challenge: survival and control matter more than damage.",
+            "Status effects and high-tier Poké Balls improve your odds, and you should avoid moves that can critically KO.",
+            "Capture plan: [SPOILER: Save before the encounter. Use sleep/paralysis to improve catch rate, lower HP carefully (avoid high-crit moves), then throw Ultra Balls. If you have them, use stronger balls and keep healing — the fight can take many turns.]"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "src-1",
+              "section": "[53] Cerulean Cave          Encounter Rate 1F: 10",
+              "lines": "13217-13330"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
