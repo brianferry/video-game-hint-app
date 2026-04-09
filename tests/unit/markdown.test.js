@@ -48,3 +48,37 @@ describe('renderHint', () => {
     expect(result).toContain('Hello world');
   });
 });
+
+describe('XSS sanitization', () => {
+  test('strips script tags from hint text', () => {
+    const result = renderHint('Try this: <script>alert("xss")</script> and continue.');
+    expect(result).not.toContain('<script');
+    expect(result).not.toContain('alert');
+    expect(result).toContain('Try this:');
+  });
+
+  test('strips onerror handler from img tags', () => {
+    const result = renderHint('Look at <img onerror=alert(1) src=x> this.');
+    expect(result).not.toContain('onerror');
+    expect(result).not.toContain('alert');
+  });
+
+  test('strips XSS payload inside SPOILER tags', () => {
+    const result = renderHint('[SPOILER: <img onerror=alert(1) src=x>]');
+    expect(result).toContain('<details');
+    expect(result).not.toContain('onerror');
+    expect(result).not.toContain('alert');
+  });
+
+  test('strips javascript: protocol from links', () => {
+    const result = renderHint('[click me](javascript:alert(1))');
+    expect(result).not.toContain('javascript:');
+  });
+
+  test('preserves safe HTML within spoilers', () => {
+    const result = renderHint('[SPOILER: Use the Hookshot here]');
+    expect(result).toContain('<details');
+    expect(result).toContain('Use the Hookshot here');
+    expect(result).toContain('</details>');
+  });
+});

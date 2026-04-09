@@ -114,8 +114,6 @@ test.describe('Search', () => {
     await page.goto('/');
     await page.locator('[data-test="search"]').fill('boss');
 
-    // Wait for debounced results
-    await page.waitForTimeout(400);
     const results = page.locator('[data-test="search-result"]');
     await expect(results.first()).toBeVisible();
   });
@@ -123,7 +121,6 @@ test.describe('Search', () => {
   test('clicking search result navigates to situation', async ({ page }) => {
     await page.goto('/');
     await page.locator('[data-test="search"]').fill('kraid');
-    await page.waitForTimeout(400);
 
     await page.locator('[data-test="search-result"]').first().click();
     await expect(page).toHaveURL(/situation=/);
@@ -133,7 +130,6 @@ test.describe('Search', () => {
   test('shows no results message for unmatched query', async ({ page }) => {
     await page.goto('/');
     await page.locator('[data-test="search"]').fill('xyznonexistent');
-    await page.waitForTimeout(400);
     await expect(page.locator('.placeholder')).toContainText('No results');
   });
 });

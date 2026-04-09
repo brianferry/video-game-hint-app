@@ -1,45 +1,7 @@
 import Fuse from 'fuse.js';
 import { getAllGames } from './data-loader.js';
 import { USER_GAMES_CHANGED } from './user-games.js';
-
-/**
- * Flatten all games into searchable situation records.
- * Each record carries enough context for breadcrumb display + navigation.
- */
-function flattenSituations(games) {
-  const records = [];
-  for (const game of games) {
-    for (const area of game.areas || []) {
-      for (const situation of area.situations || []) {
-        records.push({
-          gameSlug: game.slug,
-          gameTitle: game.title,
-          areaId: area.id,
-          areaName: area.name,
-          situationId: situation.id,
-          title: situation.title,
-          context: situation.context || '',
-          tags: situation.tags || [],
-          order: situation.order || 0,
-        });
-      }
-    }
-  }
-  return records;
-}
-
-const FUSE_OPTIONS = {
-  threshold: 0.4,
-  minMatchCharLength: 2,
-  includeScore: true,
-  keys: [
-    { name: 'title', weight: 2 },
-    { name: 'tags', weight: 1.5 },
-    { name: 'context', weight: 1.2 },
-    { name: 'areaName', weight: 1 },
-    { name: 'gameTitle', weight: 1 },
-  ],
-};
+import { flattenSituations, FUSE_OPTIONS, FUSE_OPTIONS_SINGLE_GAME } from './search-shared.js';
 
 let globalIndex = null;
 const gameIndexes = new Map();
@@ -74,15 +36,7 @@ function getGlobalIndex() {
 function getGameIndex(gameSlug, gameData) {
   if (gameIndexes.has(gameSlug)) return gameIndexes.get(gameSlug);
   const records = flattenSituations([gameData]);
-  const index = new Fuse(records, {
-    ...FUSE_OPTIONS,
-    keys: [
-      { name: 'title', weight: 2 },
-      { name: 'tags', weight: 1.5 },
-      { name: 'context', weight: 1.2 },
-      { name: 'areaName', weight: 1 },
-    ],
-  });
+  const index = new Fuse(records, FUSE_OPTIONS_SINGLE_GAME);
   gameIndexes.set(gameSlug, index);
   return index;
 }

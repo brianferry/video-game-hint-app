@@ -23,6 +23,10 @@
   let searchResults = $state([]);
   let debounceTimer = null;
 
+  $effect(() => {
+    return () => clearTimeout(debounceTimer);
+  });
+
   function handleSearch(e) {
     query = e.target.value;
     clearTimeout(debounceTimer);
@@ -72,6 +76,12 @@
   />
 </div>
 
+<div class="sr-only" aria-live="polite" aria-atomic="true">
+  {#if query.length >= 2}
+    {searchResults.length} {searchResults.length === 1 ? 'result' : 'results'} found
+  {/if}
+</div>
+
 {#if query.length >= 2 && searchResults.length > 0}
   <ul class="search-results" role="list" aria-label="Search results">
     {#each searchResults as result}
@@ -94,38 +104,40 @@
 {/if}
 
 {#if searchResults.length === 0}
-  <div class="game-list" data-test="game-list" aria-label="Available games">
+  <ul class="game-list" data-test="game-list" aria-label="Available games">
     {#each gameIndex as game}
-      <button
-        class="game-card"
-        onclick={() => goToGame(game.slug)}
-        data-test="game-card-{game.slug}"
-      >
-        <div class="game-card-title">
-          {game.title}
-          {#if game.isLocal}
-            <span class="game-card-local-badge" title="Stored on this device only">Local</span>
-          {/if}
-        </div>
-        <div class="game-card-meta">
-          {game.year} · {game.areaCount} {game.areaCount === 1 ? 'area' : 'areas'} · {game.situationCount} {game.situationCount === 1 ? 'hint' : 'hints'}
-        </div>
-        <div class="game-card-bottom">
-          {#if game.quality}
-            <span class="star-rating" aria-label="{game.quality.stars} out of 5 stars">
-              {#each Array(5) as _, i}
-                <span class="star" class:star-filled={i < game.quality.stars} aria-hidden="true">{i < game.quality.stars ? '\u2605' : '\u2606'}</span>
-              {/each}
-            </span>
-          {/if}
-          {#if game.coverage !== null}
-            <div class="coverage-bar" aria-label="{game.coverage}% of game mapped">
-              <div class="coverage-fill" style="width: {game.coverage}%"></div>
-              <span class="coverage-label">{game.coverage}% mapped</span>
-            </div>
-          {/if}
-        </div>
-      </button>
+      <li>
+        <button
+          class="game-card"
+          onclick={() => goToGame(game.slug)}
+          data-test="game-card-{game.slug}"
+        >
+          <div class="game-card-title">
+            {game.title}
+            {#if game.isLocal}
+              <span class="game-card-local-badge" title="Stored on this device only">Local</span>
+            {/if}
+          </div>
+          <div class="game-card-meta">
+            {game.year} · {game.areaCount} {game.areaCount === 1 ? 'area' : 'areas'} · {game.situationCount} {game.situationCount === 1 ? 'hint' : 'hints'}
+          </div>
+          <div class="game-card-bottom">
+            {#if game.quality}
+              <span class="star-rating" aria-label="{game.quality.stars} out of 5 stars">
+                {#each Array(5) as _, i}
+                  <span class="star" class:star-filled={i < game.quality.stars} aria-hidden="true">{i < game.quality.stars ? '\u2605' : '\u2606'}</span>
+                {/each}
+              </span>
+            {/if}
+            {#if game.coverage !== null}
+              <div class="coverage-bar" role="progressbar" aria-valuenow={game.coverage} aria-valuemin={0} aria-valuemax={100} aria-label="{game.coverage}% of game mapped">
+                <div class="coverage-fill" style="width: {game.coverage}%"></div>
+                <span class="coverage-label">{game.coverage}% mapped</span>
+              </div>
+            {/if}
+          </div>
+        </button>
+      </li>
     {/each}
-  </div>
+  </ul>
 {/if}

@@ -10,6 +10,10 @@
   let searchResults = $state([]);
   let debounceTimer = null;
 
+  $effect(() => {
+    return () => clearTimeout(debounceTimer);
+  });
+
   function handleSearch(e) {
     query = e.target.value;
     clearTimeout(debounceTimer);
@@ -62,7 +66,7 @@
   {#if gameData.totalEstimatedSituations > 0}
     {@const situationCount = gameData.areas.reduce((s, a) => s + a.situations.length, 0)}
     {@const coverage = Math.round((situationCount / gameData.totalEstimatedSituations) * 100)}
-    <div class="coverage-bar coverage-bar-lg" aria-label="{coverage}% of game mapped with hints">
+    <div class="coverage-bar coverage-bar-lg" role="progressbar" aria-valuenow={coverage} aria-valuemin={0} aria-valuemax={100} aria-label="{coverage}% of game mapped with hints">
       <div class="coverage-fill" style="width: {coverage}%"></div>
       <span class="coverage-label">{coverage}% mapped ({situationCount} of ~{gameData.totalEstimatedSituations} situations)</span>
     </div>
@@ -82,6 +86,12 @@
     />
   </div>
 
+  <div class="sr-only" aria-live="polite" aria-atomic="true">
+    {#if query.length >= 2}
+      {searchResults.length} {searchResults.length === 1 ? 'result' : 'results'} found
+    {/if}
+  </div>
+
   {#if query.length >= 2 && searchResults.length > 0}
     <ul class="search-results" role="list" aria-label="Search results">
       {#each searchResults as result}
@@ -98,19 +108,21 @@
   {/if}
 
   {#if searchResults.length === 0}
-    <div class="item-list" aria-label="Areas in {gameData.title}">
+    <ul class="item-list" aria-label="Areas in {gameData.title}">
       {#each gameData.areas as area}
-        <button
-          class="item-card"
-          onclick={() => goToArea(area.id)}
-        >
-          <div class="item-card-title">{area.name}</div>
-          <div class="item-card-sub">
-            {area.situations.length} {area.situations.length === 1 ? 'situation' : 'situations'}
-          </div>
-        </button>
+        <li>
+          <button
+            class="item-card"
+            onclick={() => goToArea(area.id)}
+          >
+            <div class="item-card-title">{area.name}</div>
+            <div class="item-card-sub">
+              {area.situations.length} {area.situations.length === 1 ? 'situation' : 'situations'}
+            </div>
+          </button>
+        </li>
       {/each}
-    </div>
+    </ul>
   {/if}
 
   {#if gameData.sources?.length > 0}

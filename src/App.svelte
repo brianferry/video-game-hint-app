@@ -10,11 +10,23 @@
   let routeParams = $state({ game: null, area: null, situation: null });
   let theme = $state(document.documentElement.dataset.theme ?? 'light');
 
+  function parseRoute(params) {
+    if (params.get('view') === 'import') {
+      return { view: 'import', params: { game: null, area: null, situation: null } };
+    }
+    const game = params.get('game');
+    const area = params.get('area');
+    const situation = params.get('situation');
+    if (game && area && situation) return { view: 'situation', params: { game, area, situation } };
+    if (game && area) return { view: 'area', params: { game, area, situation: null } };
+    if (game) return { view: 'game', params: { game, area: null, situation: null } };
+    return { view: 'home', params: { game: null, area: null, situation: null } };
+  }
+
   function navigate(view, params = {}) {
     currentView = view;
     routeParams = { game: null, area: null, situation: null, ...params };
 
-    // Update URL query string
     const url = new URL(window.location);
     url.search = '';
     if (view === 'import') {
@@ -40,53 +52,18 @@
     saveTheme(next);
   }
 
-  // Parse URL on initial load
+  // Restore route from URL on initial load (no history push)
   $effect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('view') === 'import') {
-      navigate('import', {});
-      return () => {};
-    }
-    const game = params.get('game');
-    const area = params.get('area');
-    const situation = params.get('situation');
-
-    if (game && area && situation) {
-      navigate('situation', { game, area, situation });
-    } else if (game && area) {
-      navigate('area', { game, area });
-    } else if (game) {
-      navigate('game', { game });
-    }
-
-    return () => {};
+    const route = parseRoute(new URLSearchParams(window.location.search));
+    currentView = route.view;
+    routeParams = route.params;
   });
 
   // Handle browser back/forward
   function handlePopState() {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('view') === 'import') {
-      currentView = 'import';
-      routeParams = { game: null, area: null, situation: null };
-      return;
-    }
-    const game = params.get('game');
-    const area = params.get('area');
-    const situation = params.get('situation');
-
-    if (game && area && situation) {
-      currentView = 'situation';
-      routeParams = { game, area, situation };
-    } else if (game && area) {
-      currentView = 'area';
-      routeParams = { game, area, situation: null };
-    } else if (game) {
-      currentView = 'game';
-      routeParams = { game, area: null, situation: null };
-    } else {
-      currentView = 'home';
-      routeParams = { game: null, area: null, situation: null };
-    }
+    const route = parseRoute(new URLSearchParams(window.location.search));
+    currentView = route.view;
+    routeParams = route.params;
   }
 
   $effect(() => {

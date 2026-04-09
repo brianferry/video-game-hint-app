@@ -28,6 +28,7 @@ import { readFileSync, readdirSync, existsSync, statSync } from 'fs';
 import { resolve, dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 import Fuse from 'fuse.js';
+import { flattenSituations, FUSE_OPTIONS, FUSE_OPTIONS_SINGLE_GAME } from '../src/lib/search-shared.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = resolve(__dirname, '..');
@@ -76,46 +77,14 @@ function getAllGames() {
 }
 
 // ---------------------------------------------------------------------------
-// Search (Fuse.js, same config as the frontend)
+// Search (Fuse.js, shared config with the frontend)
 // ---------------------------------------------------------------------------
 
 let searchIndex = null;
 
-function flattenSituations(games) {
-  const records = [];
-  for (const game of games) {
-    for (const area of game.areas || []) {
-      for (const situation of area.situations || []) {
-        records.push({
-          gameSlug: game.slug,
-          gameTitle: game.title,
-          areaId: area.id,
-          areaName: area.name,
-          situationId: situation.id,
-          title: situation.title,
-          context: situation.context || '',
-          tags: situation.tags || [],
-        });
-      }
-    }
-  }
-  return records;
-}
-
 function getSearchIndex() {
   if (searchIndex) return searchIndex;
-  searchIndex = new Fuse(flattenSituations(getAllGames()), {
-    threshold: 0.4,
-    minMatchCharLength: 2,
-    includeScore: true,
-    keys: [
-      { name: 'title', weight: 2 },
-      { name: 'tags', weight: 1.5 },
-      { name: 'context', weight: 1.2 },
-      { name: 'areaName', weight: 1 },
-      { name: 'gameTitle', weight: 1 },
-    ],
-  });
+  searchIndex = new Fuse(flattenSituations(getAllGames()), FUSE_OPTIONS);
   return searchIndex;
 }
 
@@ -306,17 +275,7 @@ server.tool(
     if (gameSlug) {
       const gameData = getGame(gameSlug);
       if (!gameData) return { content: [{ type: 'text', text: `Game not found: ${gameSlug}` }], isError: true };
-      const index = new Fuse(flattenSituations([gameData]), {
-        threshold: 0.4,
-        minMatchCharLength: 2,
-        includeScore: true,
-        keys: [
-          { name: 'title', weight: 2 },
-          { name: 'tags', weight: 1.5 },
-          { name: 'context', weight: 1.2 },
-          { name: 'areaName', weight: 1 },
-        ],
-      });
+      const index = new Fuse(flattenSituations([gameData]), FUSE_OPTIONS_SINGLE_GAME);
       results = index.search(query);
     } else {
       results = getSearchIndex().search(query);

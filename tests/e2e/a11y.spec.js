@@ -17,7 +17,7 @@ for (const view of views) {
     await page.evaluate(() => {
       document.documentElement.dataset.theme = 'light';
     });
-    await page.waitForTimeout(100);
+    await expect(page.locator('#main-content')).toBeVisible();
 
     const results = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa', 'wcag21aa'])
@@ -31,7 +31,7 @@ for (const view of views) {
     await page.evaluate(() => {
       document.documentElement.dataset.theme = 'dark';
     });
-    await page.waitForTimeout(100);
+    await expect(page.locator('#main-content')).toBeVisible();
 
     const results = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa', 'wcag21aa'])

@@ -228,18 +228,9 @@ export function validateGameJsonText(text) {
     return { ok: false, errors: parsed.errors, warnings: [] };
   }
   const { ok, errors, warnings } = validateGameObject(parsed.data);
-  /** Plain object tree — safe for Svelte state / IndexedDB (no Proxy wrappers). */
-  let data;
-  if (ok) {
-    try {
-      data = JSON.parse(JSON.stringify(parsed.data));
-    } catch {
-      data = parsed.data;
-    }
-  }
   return {
     ok,
-    data,
+    data: ok ? parsed.data : undefined,
     errors,
     warnings,
   };

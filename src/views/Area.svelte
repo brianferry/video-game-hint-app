@@ -27,24 +27,26 @@
   <h1 class="view-title">{area.name}</h1>
   <p class="view-subtitle">{area.situations.length} {area.situations.length === 1 ? 'situation' : 'situations'}</p>
 
-  <div class="item-list" aria-label="Situations in {area.name}">
+  <ul class="item-list" aria-label="Situations in {area.name}">
     {#each area.situations as situation}
-      <button
-        class="item-card"
-        onclick={() => goToSituation(situation.id)}
-      >
-        <div class="item-card-title">{situation.title}</div>
-        {#if situation.context}
-          <div class="item-card-context">{situation.context}</div>
-        {/if}
-        {#if situation.tags?.length > 0}
-          <div class="tag-list">
-            {#each situation.tags as tag}
-              <span class="tag">{tag}</span>
-            {/each}
-          </div>
-        {/if}
-      </button>
+      <li>
+        <button
+          class="item-card"
+          onclick={() => goToSituation(situation.id)}
+        >
+          <div class="item-card-title">{situation.title}</div>
+          {#if situation.context}
+            <div class="item-card-context">{situation.context}</div>
+          {/if}
+          {#if situation.tags?.length > 0}
+            <div class="tag-list">
+              {#each situation.tags as tag}
+                <span class="tag">{tag}</span>
+              {/each}
+            </div>
+          {/if}
+        </button>
+      </li>
     {/each}
-  </div>
+  </ul>
 {/if}

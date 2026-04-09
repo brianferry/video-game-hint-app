@@ -393,6 +393,9 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .game-card {
@@ -719,6 +722,9 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .item-card {
